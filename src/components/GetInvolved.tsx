@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function GetInvolved() {
   return (
-    <section id="get-involved" className="py-32 lg:py-40 relative">
+    <section id="get-involved" className="py-20 lg:py-28 relative">
       {/* Section divider */}
-      <div className="section-divider mb-32" />
+      <div className="section-divider mb-20" />
 
       {/* Background gradient */}
       <div className="absolute inset-0 overflow-hidden">
@@ -34,7 +34,7 @@ export default function GetInvolved() {
             {/* Floating stat */}
             <div className="absolute -bottom-6 -right-6 bg-black p-6 white-frame">
               <span className="font-editorial text-4xl text-wvg-teal">23+</span>
-              <p className="font-mono text-[10px] uppercase tracking-wider text-white/40 mt-1">
+              <p className="font-mono text-[10px] uppercase tracking-wider text-white/60 mt-1">
                 Students matched
               </p>
             </div>
@@ -47,13 +47,13 @@ export default function GetInvolved() {
           <div className="order-1 lg:order-2">
             {/* Section header */}
             <div className="flex items-center gap-4 mb-8">
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/40">06</span>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">06</span>
               <div className="w-12 h-[1px] bg-white/20" />
             </div>
             
             <h2 className="font-editorial text-5xl lg:text-6xl mb-8">Get involved</h2>
 
-            <div className="font-mono text-sm text-white/50 leading-relaxed space-y-6">
+            <div className="font-mono text-sm text-white/70 leading-relaxed space-y-6">
               <p className="font-grotesk text-xl text-white/80">
                 WVG is for students who want to build, not wait.
               </p>

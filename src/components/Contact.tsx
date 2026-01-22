@@ -39,9 +39,9 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-32 lg:py-40 relative">
+    <section id="contact" className="py-20 lg:py-28 relative">
       {/* Section divider */}
-      <div className="section-divider mb-32" />
+      <div className="section-divider mb-20" />
 
       {/* Background gradient */}
       <div className="absolute inset-0 overflow-hidden">
@@ -54,7 +54,7 @@ export default function Contact() {
           <div>
             {/* Section header */}
             <div className="flex items-center gap-4 mb-8">
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/40">08</span>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">08</span>
               <div className="w-12 h-[1px] bg-white/20" />
             </div>
 
@@ -66,7 +66,7 @@ export default function Contact() {
 
             {/* Email */}
             <div className="white-frame p-6 inline-block mb-12">
-              <p className="font-mono text-[10px] uppercase tracking-widest text-white/40 mb-2">
+              <p className="font-mono text-[10px] uppercase tracking-widest text-white/60 mb-2">
                 Email
               </p>
               <a
@@ -79,7 +79,7 @@ export default function Contact() {
 
             {/* Quick links */}
             <div className="space-y-4">
-              <p className="font-mono text-[10px] uppercase tracking-widest text-white/40">
+              <p className="font-mono text-[10px] uppercase tracking-widest text-white/60">
                 Quick links
               </p>
               <div className="flex flex-wrap gap-3">
@@ -103,7 +103,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <h3 className="font-editorial text-2xl mb-4">Message sent</h3>
-                <p className="font-mono text-sm text-white/50">
+                <p className="font-mono text-sm text-white/70">
                   We'll be in touch soon.
                 </p>
               </div>
@@ -111,7 +111,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="white-frame p-8 lg:p-10 space-y-6">
                 {/* Name */}
                 <div>
-                  <label htmlFor="name" className="block font-mono text-[10px] uppercase tracking-widest text-white/40 mb-2">
+                  <label htmlFor="name" className="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-2">
                     Name *
                   </label>
                   <input
@@ -128,7 +128,7 @@ export default function Contact() {
 
                 {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block font-mono text-[10px] uppercase tracking-widest text-white/40 mb-2">
+                  <label htmlFor="email" className="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-2">
                     Email *
                   </label>
                   <input
@@ -145,7 +145,7 @@ export default function Contact() {
 
                 {/* Organization */}
                 <div>
-                  <label htmlFor="organization" className="block font-mono text-[10px] uppercase tracking-widest text-white/40 mb-2">
+                  <label htmlFor="organization" className="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-2">
                     Organization
                   </label>
                   <input
@@ -161,7 +161,7 @@ export default function Contact() {
 
                 {/* Intent */}
                 <div>
-                  <label htmlFor="intent" className="block font-mono text-[10px] uppercase tracking-widest text-white/40 mb-2">
+                  <label htmlFor="intent" className="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-2">
                     How can we help? *
                   </label>
                   <select
@@ -180,7 +180,7 @@ export default function Contact() {
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="message" className="block font-mono text-[10px] uppercase tracking-widest text-white/40 mb-2">
+                  <label htmlFor="message" className="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-2">
                     Message *
                   </label>
                   <textarea

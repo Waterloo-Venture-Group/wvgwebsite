@@ -22,12 +22,12 @@ const upcomingEvents = [
 
 export default function EventList() {
   return (
-    <section className="py-24 lg:py-32 relative">
+    <section className="py-16 lg:py-20 relative">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
           <div>
-            <p className="font-mono text-[10px] uppercase tracking-widest text-white/40 mb-3">
+            <p className="font-mono text-[10px] uppercase tracking-widest text-white/60 mb-3">
               Upcoming
             </p>
             <h3 className="font-editorial text-3xl lg:text-4xl">Events</h3>
@@ -57,13 +57,13 @@ export default function EventList() {
                 <h4 className="font-grotesk text-lg lg:text-xl group-hover:text-wvg-teal transition-colors">
                   {event.name}
                 </h4>
-                <div className="flex items-center gap-4 font-mono text-xs text-white/40">
+                <div className="flex items-center gap-4 font-mono text-xs text-white/60">
                   <span>{event.date}</span>
                   <span className="w-1 h-1 rounded-full bg-white/20" />
                   <span>{event.location}</span>
                 </div>
               </div>
-              <div className="mt-4 lg:mt-0 flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-white/40 group-hover:text-white transition-colors">
+              <div className="mt-4 lg:mt-0 flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-white/60 group-hover:text-white transition-colors">
                 <span>RSVP</span>
                 <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />

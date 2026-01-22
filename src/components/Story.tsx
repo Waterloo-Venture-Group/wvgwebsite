@@ -1,6 +1,6 @@
 export default function Story() {
   return (
-    <section id="story" className="py-32 lg:py-40 relative">
+    <section id="story" className="py-20 lg:py-28 relative">
       {/* Background subtle gradient */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/2 left-0 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-wvg-green/5 to-transparent blur-[100px]" />
@@ -8,8 +8,8 @@ export default function Story() {
 
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Section header */}
-        <div className="flex items-center gap-4 mb-16">
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/40">01</span>
+        <div className="flex items-center gap-4 mb-12">
+          <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">01</span>
           <div className="w-12 h-[1px] bg-white/20" />
           <h2 className="font-editorial text-5xl lg:text-6xl">The story</h2>
         </div>
@@ -24,7 +24,7 @@ export default function Story() {
             </p>
 
             {/* Editorial blocks */}
-            <div className="space-y-6 font-mono text-sm text-white/50 leading-relaxed">
+            <div className="space-y-6 font-mono text-sm text-white/70 leading-relaxed">
               <div className="editorial-block">
                 <p>
                   Founders stall between "this could be something" and "this is real."
@@ -45,7 +45,7 @@ export default function Story() {
 
             <div className="h-[1px] bg-white/10 my-10" />
 
-            <div className="font-mono text-sm text-white/50 leading-relaxed space-y-6">
+            <div className="font-mono text-sm text-white/70 leading-relaxed space-y-6">
               <p>So we started paying attention to where things actually move.</p>
               
               <p className="text-white/70 font-grotesk text-lg">
@@ -73,7 +73,7 @@ export default function Story() {
         {/* Expanded narrative */}
         <div className="mt-20 grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8 lg:col-start-3">
-            <div className="font-mono text-sm text-white/50 leading-relaxed space-y-6">
+            <div className="font-mono text-sm text-white/70 leading-relaxed space-y-6">
               <p>
                 Waterloo Venture Group is a student-led pro-bono venture consultancy, 
                 talent network, and community built around a simple thesis:

@@ -26,7 +26,7 @@ export default function Footer() {
             <div className="grid grid-cols-2 gap-8">
               {/* Navigation */}
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-white/40 mb-4">
+                <p className="font-mono text-[10px] uppercase tracking-widest text-white/50 mb-4">
                   Navigate
                 </p>
                 <ul className="space-y-3">
@@ -37,9 +37,9 @@ export default function Footer() {
                     { href: "#contact", label: "Contact" },
                   ].map((link) => (
                     <li key={link.href}>
-                      <a
-                        href={link.href}
-                        className="font-mono text-sm text-white/50 hover:text-white transition-colors"
+                  <a
+                    href={link.href}
+                    className="font-mono text-sm text-white/60 hover:text-white transition-colors"
                       >
                         {link.label}
                       </a>
@@ -50,7 +50,7 @@ export default function Footer() {
 
               {/* Connect */}
               <div>
-                <p className="font-mono text-[10px] uppercase tracking-widest text-white/40 mb-4">
+                <p className="font-mono text-[10px] uppercase tracking-widest text-white/50 mb-4">
                   Connect
                 </p>
                 <ul className="space-y-3">
@@ -65,7 +65,7 @@ export default function Footer() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="font-mono text-sm text-white/50 hover:text-white transition-colors inline-flex items-center gap-1"
+                        className="font-mono text-sm text-white/60 hover:text-white transition-colors inline-flex items-center gap-1"
                       >
                         {link.label}
                         <svg className="w-3 h-3 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -82,10 +82,10 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-20 pt-8 border-t border-white/10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-          <p className="font-mono text-xs text-white/30">
+          <p className="font-mono text-xs text-white/50">
             © {new Date().getFullYear()} Waterloo Venture Group. All rights reserved.
           </p>
-          <p className="font-mono text-xs text-white/30">
+          <p className="font-mono text-xs text-white/50">
             Waterloo, Ontario, Canada
           </p>
         </div>

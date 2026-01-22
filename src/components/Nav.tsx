@@ -44,7 +44,7 @@ export default function Nav() {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-mono text-xs uppercase tracking-wider text-white/60 hover:text-white transition-colors duration-200"
+                className="font-mono text-xs uppercase tracking-wider text-white/70 hover:text-white transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -103,7 +103,7 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="font-mono text-sm uppercase tracking-wider text-white/60 hover:text-white transition-colors"
+              className="font-mono text-sm uppercase tracking-wider text-white/70 hover:text-white transition-colors"
             >
               {link.label}
             </a>

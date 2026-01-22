@@ -23,7 +23,7 @@ export default function Hero() {
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Text Content */}
-          <div className="flex flex-col gap-8 lg:gap-10">
+          <div className="flex flex-col gap-6 lg:gap-8">
             {/* Label */}
             <div className="flex items-center gap-3">
               <div className="w-8 h-[1px] bg-wvg-teal" />
@@ -33,7 +33,7 @@ export default function Hero() {
             </div>
 
             {/* Title */}
-            <h1 className="font-editorial text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-medium">
+            <h1 className="font-editorial text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-medium">
               <span className="block">WATERLOO</span>
               <span className="block gradient-text">VENTURE</span>
               <span className="block">GROUP</span>
@@ -45,7 +45,7 @@ export default function Hero() {
             </p>
 
             {/* Body copy */}
-            <div className="font-mono text-sm text-white/50 leading-relaxed max-w-lg space-y-4">
+            <div className="font-mono text-sm text-white/70 leading-relaxed max-w-lg space-y-4">
               <p>
                 Waterloo Venture Group exists for one reason: the right introduction, 
                 at the right moment, can change everything.
@@ -55,7 +55,7 @@ export default function Hero() {
                 students find co-op and new-grad roles that ship, and funds meet talent 
                 and companies before the rest of the market catches on.
               </p>
-              <p className="text-white/70">
+              <p className="text-white/90">
                 Built in Waterloo.<br />
                 Connected far beyond it.
               </p>
@@ -101,7 +101,7 @@ export default function Hero() {
 
             {/* Floating metadata */}
             <div className="absolute -bottom-6 -left-6 bg-black p-4 white-frame">
-              <p className="font-mono text-[10px] uppercase tracking-wider text-white/40">Location</p>
+              <p className="font-mono text-[10px] uppercase tracking-wider text-white/60">Location</p>
               <p className="font-grotesk text-sm">Waterloo, ON</p>
             </div>
 
@@ -113,7 +113,7 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <span className="font-mono text-[10px] uppercase tracking-widest text-white/30">Scroll</span>
+        <span className="font-mono text-[10px] uppercase tracking-widest text-white/50">Scroll</span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-white/30 to-transparent" />
       </div>
     </section>

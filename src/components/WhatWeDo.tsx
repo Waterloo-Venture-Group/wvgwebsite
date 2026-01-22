@@ -1,8 +1,8 @@
 export default function WhatWeDo() {
   return (
-    <section id="what-we-do" className="py-32 lg:py-40 relative">
+    <section id="what-we-do" className="py-20 lg:py-28 relative">
       {/* Section divider */}
-      <div className="section-divider mb-32" />
+      <div className="section-divider mb-20" />
 
       {/* Background gradient */}
       <div className="absolute inset-0 overflow-hidden">
@@ -12,14 +12,14 @@ export default function WhatWeDo() {
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Section header */}
         <div className="flex items-center gap-4 mb-8">
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/40">02</span>
+          <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">02</span>
           <div className="w-12 h-[1px] bg-white/20" />
           <h2 className="font-editorial text-5xl lg:text-6xl">What we do</h2>
         </div>
 
         {/* Intro copy */}
-        <div className="max-w-3xl mb-20">
-          <div className="font-mono text-sm text-white/50 leading-relaxed space-y-4">
+        <div className="max-w-3xl mb-16">
+          <div className="font-mono text-sm text-white/70 leading-relaxed space-y-4">
             <p>We don't "run programs."</p>
             <p>We don't host filler events.</p>
             <p>We don't send people home with tote bags and nothing to follow up on.</p>
@@ -48,7 +48,7 @@ export default function WhatWeDo() {
                 Investors, co-founders, and early operators.
               </h3>
 
-              <div className="font-mono text-sm text-white/50 leading-relaxed space-y-4 mb-8">
+              <div className="font-mono text-sm text-white/70 leading-relaxed space-y-4 mb-8">
                 <p>
                   We help you find investors, co-founders, and early operators — and get 
                   your story tight enough that when the moment comes, you're ready.
@@ -88,7 +88,7 @@ export default function WhatWeDo() {
                 Real work in rooms where people build.
               </h3>
 
-              <div className="font-mono text-sm text-white/50 leading-relaxed space-y-4 mb-8">
+              <div className="font-mono text-sm text-white/70 leading-relaxed space-y-4 mb-8">
                 <p>
                   We help you get real work — co-ops, new-grad roles, and early startup 
                   experience — by putting you in rooms where people are building, not posturing.
@@ -126,7 +126,7 @@ export default function WhatWeDo() {
                 High-signal talent and companies, early.
               </h3>
 
-              <div className="font-mono text-sm text-white/50 leading-relaxed space-y-4 mb-8">
+              <div className="font-mono text-sm text-white/70 leading-relaxed space-y-4 mb-8">
                 <p>
                   We help you meet high-signal talent and future portfolio companies early — 
                   before the hype cycle, before the pitch deck polish, before everyone else shows up.

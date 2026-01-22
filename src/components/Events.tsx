@@ -35,9 +35,9 @@ const eventPhotos = [
 
 export default function Events() {
   return (
-    <section id="events" className="py-32 lg:py-40 relative">
+    <section id="events" className="py-20 lg:py-28 relative">
       {/* Section divider */}
-      <div className="section-divider mb-32" />
+      <div className="section-divider mb-20" />
 
       {/* Background gradient */}
       <div className="absolute inset-0 overflow-hidden">
@@ -49,11 +49,11 @@ export default function Events() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
           <div>
             <div className="flex items-center gap-4 mb-4">
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/40">04</span>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">04</span>
               <div className="w-12 h-[1px] bg-white/20" />
             </div>
             <h2 className="font-editorial text-5xl lg:text-6xl mb-4">Rooms we built</h2>
-            <p className="font-mono text-sm text-white/50 max-w-lg">
+            <p className="font-mono text-sm text-white/70 max-w-lg">
               WVG curates high-signal rooms where founders, investors, and students 
               meet before outcomes are obvious.
             </p>
@@ -89,7 +89,7 @@ export default function Events() {
                   {/* Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
                     <h3 className="font-editorial text-2xl mb-2">{event.title}</h3>
-                    <div className="flex items-center gap-4 font-mono text-[10px] uppercase tracking-wider text-white/50">
+                    <div className="flex items-center gap-4 font-mono text-[10px] uppercase tracking-wider text-white/70">
                       <span>{event.date}</span>
                       <span className="w-1 h-1 rounded-full bg-white/30" />
                       <span>{event.location}</span>
@@ -122,7 +122,7 @@ export default function Events() {
                   {/* Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
                     <h3 className="font-editorial text-2xl mb-2">{event.title}</h3>
-                    <div className="flex items-center gap-4 font-mono text-[10px] uppercase tracking-wider text-white/50">
+                    <div className="flex items-center gap-4 font-mono text-[10px] uppercase tracking-wider text-white/70">
                       <span>{event.date}</span>
                       <span className="w-1 h-1 rounded-full bg-white/30" />
                       <span>{event.location}</span>

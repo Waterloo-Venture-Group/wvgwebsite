@@ -63,14 +63,14 @@ const socialLinks = [
 
 export default function Socials() {
   return (
-    <section id="socials" className="py-24 lg:py-32 relative">
+    <section id="socials" className="py-16 lg:py-20 relative">
       {/* Section divider */}
-      <div className="section-divider mb-16" />
+      <div className="section-divider mb-12" />
 
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="flex items-center gap-4 mb-12">
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/40">07</span>
+          <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">07</span>
           <div className="w-12 h-[1px] bg-white/20" />
           <h2 className="font-editorial text-3xl lg:text-4xl">Socials</h2>
         </div>
@@ -93,7 +93,7 @@ export default function Socials() {
                   <p className="font-grotesk font-medium group-hover:text-wvg-teal transition-colors">
                     {social.name}
                   </p>
-                  <p className="font-mono text-xs text-white/40">
+                  <p className="font-mono text-xs text-white/60">
                     {social.handle}
                   </p>
                 </div>
