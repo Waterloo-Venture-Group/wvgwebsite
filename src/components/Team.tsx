@@ -47,10 +47,10 @@ export default function Team() {
         backgroundSize: '30px 30px'
       }} />
 
-      {/* Moving crane drawing */}
-      <div className="absolute top-0 right-0 w-full h-32 pointer-events-none overflow-hidden">
+      {/* Moving crane drawing - 300% larger */}
+      <div className="absolute top-0 right-0 w-full h-96 pointer-events-none overflow-hidden">
         <svg 
-          className="absolute top-8 right-0 h-24 animate-slide-in"
+          className="absolute top-0 right-0 h-72 w-auto animate-slide-in"
           viewBox="0 0 200 100"
           style={{ animation: 'slideInCrane 2s ease-out forwards' }}
         >
@@ -106,6 +106,7 @@ export default function Team() {
                     alt={member.name}
                     fill
                     className="object-cover relative z-10"
+                    style={{ transform: 'scale(1.1)' }}
                   />
                 </div>
 

@@ -126,8 +126,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+      {/* Scroll indicator - positioned to avoid location tag */}
+      <div className="absolute bottom-8 left-1/4 -translate-x-1/2 flex flex-col items-center gap-2">
         <span className="font-mono text-[10px] uppercase tracking-widest text-white/50">Scroll</span>
         <div className="w-[1px] h-12 bg-gradient-to-b from-white/30 to-transparent" />
       </div>

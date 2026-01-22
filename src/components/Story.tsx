@@ -6,6 +6,16 @@ export default function Story() {
         <div className="absolute top-1/2 left-0 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-wvg-green/5 to-transparent blur-[100px]" />
       </div>
 
+      {/* Subtle notebook grid background */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: `
+          linear-gradient(to right, white 1px, transparent 1px),
+          linear-gradient(to bottom, white 1px, transparent 1px)
+        `,
+        backgroundSize: '25px 25px',
+        backgroundPosition: '0 0'
+      }} />
+
       {/* Subtle visual element on right side */}
       <div className="absolute top-1/4 right-0 w-[300px] h-[400px] pointer-events-none opacity-[0.03]">
         <svg viewBox="0 0 300 400" className="w-full h-full">
@@ -122,16 +132,13 @@ export default function Story() {
 
         {/* And so we founded WVG section - full width, bold */}
         <div className="w-full">
-          <h3 className="font-editorial text-3xl lg:text-4xl text-white mb-8">
-            And so we founded WVG.
-          </h3>
-
           <div className="font-mono text-base lg:text-lg text-white/80 leading-relaxed space-y-6">
-            <p className="font-grotesk text-xl lg:text-2xl text-white/90">
-              Waterloo Venture Group is a student-led pro-bono venture consultancy, 
-              talent network, and community built around a simple thesis:
+            <p className="font-editorial text-3xl lg:text-4xl text-white mb-6">
+              And so we founded WVG.
             </p>
-
+            <p className="text-white/90">
+              A student-led pro-bono venture consultancy and talent community.
+            </p>
             <p className="text-white/90">
               We've helped startups reach YC, partnered with top VCs across North America, 
               and helped unlock <span className="text-wvg-green font-semibold">$2.8M+</span> in funding — but that's just the visible part.
@@ -154,11 +161,6 @@ export default function Story() {
                 </li>
               </ul>
             </div>
-
-            <p className="text-white/90 border-l-2 border-wvg-teal/50 pl-6 py-2 font-grotesk text-lg">
-              Those moments don't scale.<br />
-              But they compound.
-            </p>
           </div>
 
           {/* CTA */}
