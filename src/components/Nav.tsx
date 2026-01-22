@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const navLinks = [
   { href: "#story", label: "Story" },
@@ -33,7 +34,14 @@ export default function Nav() {
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
             <div className="relative">
-              <span className="font-grotesk text-xl font-bold tracking-tight">WVG</span>
+              <Image
+                src="/photos/WVG-Logo-Dark-PFP.png"
+                alt="Waterloo Venture Group"
+                width={120}
+                height={40}
+                className="h-8 w-auto object-contain"
+                priority
+              />
               <div className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gradient-to-r from-wvg-green to-wvg-teal group-hover:w-full transition-all duration-300" />
             </div>
           </a>

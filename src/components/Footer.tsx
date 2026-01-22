@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="py-20 relative">
@@ -16,7 +18,13 @@ export default function Footer() {
 
             {/* Logo */}
             <div className="inline-block">
-              <span className="font-grotesk text-3xl font-bold tracking-tight">WVG</span>
+              <Image
+                src="/photos/WVG-Logo-Dark-PFP.png"
+                alt="Waterloo Venture Group"
+                width={180}
+                height={60}
+                className="h-12 w-auto object-contain"
+              />
               <div className="h-[2px] w-full bg-gradient-to-r from-wvg-green via-wvg-teal to-wvg-blue mt-2" />
             </div>
           </div>
