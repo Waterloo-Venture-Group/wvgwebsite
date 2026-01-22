@@ -63,7 +63,7 @@ const socialLinks = [
 
 export default function Socials() {
   return (
-    <section id="socials" className="py-16 lg:py-20 relative">
+    <section id="socials" className="py-12 lg:py-16 relative">
       {/* Section divider */}
       <div className="section-divider mb-12" />
 

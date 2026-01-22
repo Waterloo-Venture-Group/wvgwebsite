@@ -66,6 +66,36 @@ body {
   50% { background-position: 100% 50%; }
 }
 
+@keyframes slideInCrane {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes auraGlow {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% {
+    transform: scale(1.1) rotate(90deg);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.05) rotate(180deg);
+    opacity: 0.35;
+  }
+  75% {
+    transform: scale(1.1) rotate(270deg);
+    opacity: 0.4;
+  }
+}
+
 /* Gradient border utility */
 .gradient-border {
   position: relative;

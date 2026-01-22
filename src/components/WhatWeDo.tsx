@@ -1,8 +1,8 @@
 export default function WhatWeDo() {
   return (
-    <section id="what-we-do" className="py-20 lg:py-28 relative">
+    <section id="what-we-do" className="py-16 lg:py-20 relative">
       {/* Section divider */}
-      <div className="section-divider mb-20" />
+      <div className="section-divider mb-16" />
 
       {/* Background gradient and subtle grid */}
       <div className="absolute inset-0 overflow-hidden">

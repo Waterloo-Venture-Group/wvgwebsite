@@ -8,7 +8,7 @@ export default function Signals() {
   ];
 
   return (
-    <section className="py-16 lg:py-24 relative overflow-hidden">
+    <section className="py-12 lg:py-16 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-black via-wvg-blue/5 to-black" />
       

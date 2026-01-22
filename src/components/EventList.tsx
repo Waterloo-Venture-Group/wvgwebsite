@@ -22,7 +22,7 @@ const upcomingEvents = [
 
 export default function EventList() {
   return (
-    <section className="py-16 lg:py-20 relative">
+    <section className="py-12 lg:py-16 relative">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">

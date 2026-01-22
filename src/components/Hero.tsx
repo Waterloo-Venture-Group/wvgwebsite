@@ -28,7 +28,7 @@ export default function Hero() {
 
         <div className="relative z-10">
           {/* Label */}
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center gap-3 mb-6 mt-6">
             <div className="w-8 h-[1px] bg-wvg-teal" />
             <span className="font-mono text-xs uppercase tracking-[0.2em] text-wvg-teal">
               Student entrepreneurship community
@@ -65,8 +65,8 @@ export default function Hero() {
               </p>
               <p>
                 We build rooms where founders meet future investors and co-founders, 
-                students find co-op and new-grad roles that ship, and funds meet talent 
-                and companies before the rest of the market catches on.
+                students find new roles that ship, and funds meet talent before the rest 
+                of the market catches on.
               </p>
               <p className="text-white/90">
                 Built in Waterloo.<br />
@@ -91,20 +91,20 @@ export default function Hero() {
             </div>
             </div>
 
-            {/* Right: Visual Panel */}
-            <div className="relative">
-            {/* Main image frame */}
-            <div className="relative aspect-[4/5] white-frame overflow-hidden">
+            {/* Right: Visual Panel - matching text height */}
+            <div className="relative h-full flex items-start">
+            {/* Main image frame - matching text depth */}
+            <div className="relative w-full white-frame overflow-hidden" style={{ minHeight: '500px', height: '100%' }}>
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-wvg-blue/30 via-transparent to-wvg-purple/20 z-10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-wvg-blue/20 via-transparent to-wvg-purple/15 z-10" />
               
-              {/* Image */}
+              {/* Image - centered on people, cropped to match text depth */}
               <Image
                 src="/photos/IMG_4330.JPG"
                 alt="WVG Community Event at Communitech"
                 fill
                 className="object-cover"
-                style={{ filter: 'grayscale(60%) contrast(1.1)' }}
+                style={{ objectPosition: 'center 40%' }}
                 priority
               />
 

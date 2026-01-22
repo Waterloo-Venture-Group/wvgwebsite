@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function GetInvolved() {
   return (
-    <section id="get-involved" className="py-20 lg:py-28 relative">
+    <section id="get-involved" className="py-16 lg:py-20 relative">
       {/* Section divider */}
-      <div className="section-divider mb-20" />
+      <div className="section-divider mb-16" />
 
       {/* Background gradient */}
       <div className="absolute inset-0 overflow-hidden">
@@ -24,7 +24,6 @@ export default function GetInvolved() {
                 alt="WVG student community"
                 fill
                 className="object-cover"
-                style={{ filter: 'grayscale(60%) contrast(1.1)' }}
               />
 
               {/* Corner accents */}

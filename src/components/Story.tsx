@@ -1,9 +1,29 @@
 export default function Story() {
   return (
-    <section id="story" className="py-20 lg:py-28 relative">
+    <section id="story" className="py-16 lg:py-20 relative">
       {/* Background subtle gradient */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/2 left-0 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-wvg-green/5 to-transparent blur-[100px]" />
+      </div>
+
+      {/* Subtle visual element on right side */}
+      <div className="absolute top-1/4 right-0 w-[300px] h-[400px] pointer-events-none opacity-[0.03]">
+        <svg viewBox="0 0 300 400" className="w-full h-full">
+          <g stroke="white" strokeWidth="1" fill="none" strokeLinecap="round">
+            {/* Abstract architectural lines */}
+            <line x1="50" y1="50" x2="250" y2="100" />
+            <line x1="100" y1="150" x2="200" y2="200" />
+            <line x1="150" y1="250" x2="250" y2="300" />
+            <line x1="80" y1="300" x2="180" y2="350" />
+            {/* Grid overlay pattern */}
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="0.5" opacity="0.2"/>
+              </pattern>
+            </defs>
+            <rect width="300" height="400" fill="url(#grid)" />
+          </g>
+        </svg>
       </div>
 
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12">
