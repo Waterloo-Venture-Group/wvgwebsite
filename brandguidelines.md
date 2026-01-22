@@ -3,7 +3,7 @@
 ## 1. Brand Essence
 
 ### Core Identity
-- Minimal
+- Scrappy, bold
 - Technical
 - Editorial
 - Confident
