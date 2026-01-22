@@ -6,6 +6,7 @@ import Signals from "@/components/Signals";
 import Events from "@/components/Events";
 import BuildWithUs from "@/components/BuildWithUs";
 import GetInvolved from "@/components/GetInvolved";
+import Team from "@/components/Team";
 import EventList from "@/components/EventList";
 import Socials from "@/components/Socials";
 import Contact from "@/components/Contact";
@@ -22,6 +23,7 @@ export default function Home() {
       <Events />
       <BuildWithUs />
       <GetInvolved />
+      <Team />
       <EventList />
       <Socials />
       <Contact />

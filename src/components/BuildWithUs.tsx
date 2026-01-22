@@ -24,11 +24,6 @@ export default function BuildWithUs() {
             <h2 className="font-editorial text-5xl lg:text-6xl mb-8">Build with us</h2>
 
             <div className="font-mono text-sm text-white/70 leading-relaxed space-y-6">
-              <p className="font-grotesk text-xl text-white/80">
-                Startups work with WVG when they want real feedback, real connections, 
-                and real momentum.
-              </p>
-
               <div className="py-6">
                 <p className="font-mono text-[10px] uppercase tracking-widest text-wvg-green mb-4">
                   Support includes
@@ -40,11 +35,11 @@ export default function BuildWithUs() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 bg-wvg-green mt-2 shrink-0" />
-                    <span>Go-to-market clarity</span>
+                    <span>Go-to-market strategy</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 bg-wvg-green mt-2 shrink-0" />
-                    <span>Introductions to founders, operators, and investors</span>
+                    <span>Intros to co-founders, operators, and investors</span>
                   </li>
                 </ul>
               </div>
@@ -53,7 +48,7 @@ export default function BuildWithUs() {
               <div className="white-frame p-6 space-y-4">
                 <div className="flex items-baseline gap-4">
                   <span className="font-editorial text-3xl text-wvg-green">$2.8M+</span>
-                    <span className="text-white/60">raised across supported startups</span>
+                  <span className="text-white/60">raised across supported startups in just 8 months</span>
                 </div>
                 <div className="h-[1px] bg-white/10" />
                 <p className="text-white/60">
@@ -83,7 +78,8 @@ export default function BuildWithUs() {
                 src="/photos/IMG_0576 (1) (1).jpeg"
                 alt="WVG team working with founders"
                 fill
-                className="object-cover img-editorial"
+                className="object-cover"
+                style={{ filter: 'grayscale(60%) contrast(1.1)' }}
               />
 
               {/* Corner accents */}

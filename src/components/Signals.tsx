@@ -1,10 +1,10 @@
 export default function Signals() {
   const metrics = [
     { value: "$2.8M+", label: "In funding unlocked" },
-    { value: "YC", label: "Startups reached cohorts" },
-    { value: "25+", label: "Active members" },
-    { value: "23+", label: "Students matched with startups" },
-    { value: "North America", label: "High-signal partners" },
+    { value: "YC", label: "Cohort acceptance" },
+    { value: "1300+", label: "Active members" },
+    { value: "23+", label: "Students hired by startups" },
+    { value: "2025", label: "Celebrating one year" },
   ];
 
   return (

@@ -41,6 +41,7 @@ export default function Footer() {
                   {[
                     { href: "#story", label: "Story" },
                     { href: "#what-we-do", label: "What we do" },
+                    { href: "#team", label: "Team" },
                     { href: "#events", label: "Events" },
                     { href: "#contact", label: "Contact" },
                   ].map((link) => (
@@ -65,8 +66,9 @@ export default function Footer() {
                   {[
                     { href: "https://instagram.com/waterlooventuregroup", label: "Instagram" },
                     { href: "https://x.com/waterloovg", label: "X" },
-                    { href: "https://linkedin.com/company/waterloo-venture-group", label: "LinkedIn" },
-                    { href: "https://lu.ma/wvg", label: "Luma" },
+                    { href: "https://www.linkedin.com/company/waterlooventuregroup/", label: "LinkedIn" },
+                    { href: "https://lu.ma/user/wvg", label: "Luma" },
+                    { href: "mailto:waterloovg@gmail.com", label: "waterloovg@gmail.com" },
                   ].map((link) => (
                     <li key={link.href}>
                       <a

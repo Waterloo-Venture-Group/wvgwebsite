@@ -54,7 +54,7 @@ export default function Contact() {
           <div>
             {/* Section header */}
             <div className="flex items-center gap-4 mb-8">
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">08</span>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">09</span>
               <div className="w-12 h-[1px] bg-white/20" />
             </div>
 
@@ -70,10 +70,10 @@ export default function Contact() {
                 Email
               </p>
               <a
-                href="mailto:waterlooventuregroup@gmail.com"
+                href="mailto:waterloovg@gmail.com"
                 className="font-mono text-sm hover:text-wvg-teal transition-colors"
               >
-                waterlooventuregroup@gmail.com
+                waterloovg@gmail.com
               </a>
             </div>
 
@@ -88,6 +88,9 @@ export default function Contact() {
                 </a>
                 <a href="#get-involved" className="btn-secondary text-xs">
                   <span>Get involved</span>
+                </a>
+                <a href="#events" className="btn-secondary text-xs">
+                  <span>Partner with us</span>
                 </a>
               </div>
             </div>

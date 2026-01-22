@@ -21,28 +21,41 @@ export default function Hero() {
       </div>
 
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left: Text Content */}
-          <div className="flex flex-col gap-6 lg:gap-8">
-            {/* Label */}
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-[1px] bg-wvg-teal" />
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-wvg-teal">
-                Student-led venture consultancy
-              </span>
-            </div>
+        {/* Full-width gradient overlay for title */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/3 left-0 right-0 h-[300px] bg-gradient-to-r from-wvg-green/15 via-wvg-teal/15 via-wvg-blue/15 to-wvg-purple/15 blur-[120px] opacity-50" />
+        </div>
 
-            {/* Title */}
-            <h1 className="font-editorial text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-medium">
-              <span className="block">WATERLOO</span>
-              <span className="block gradient-text">VENTURE</span>
-              <span className="block">GROUP</span>
+        <div className="relative z-10">
+          {/* Label */}
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-8 h-[1px] bg-wvg-teal" />
+            <span className="font-mono text-xs uppercase tracking-[0.2em] text-wvg-teal">
+              Student entrepreneurship community
+            </span>
+          </div>
+
+          {/* Title - Full width spanning across image */}
+          <div className="mb-8 lg:mb-12">
+            <h1 className="font-editorial text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-medium relative">
+              {/* Soft blur backdrop for legibility */}
+              <div className="absolute inset-0 bg-gradient-to-r from-wvg-green/10 via-wvg-teal/10 via-wvg-blue/10 to-wvg-purple/10 blur-2xl" />
+              <div className="relative flex flex-wrap items-baseline gap-x-4 lg:gap-x-6 gap-y-2">
+                <span className="block">WATERLOO</span>
+                <span className="block gradient-text">VENTURE</span>
+                <span className="block">GROUP</span>
+              </div>
             </h1>
+          </div>
 
-            {/* Tagline */}
-            <p className="font-grotesk text-xl lg:text-2xl text-white/80 max-w-xl">
-              Your early-stage edge — and your way into the room.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            {/* Left: Text Content */}
+            <div className="flex flex-col gap-6 lg:gap-8">
+              {/* Tagline */}
+              <p className="font-grotesk text-xl lg:text-2xl text-white/80 leading-tight">
+                Your early-stage edge —<br />
+                and your way into the room.
+              </p>
 
             {/* Body copy */}
             <div className="font-mono text-sm text-white/70 leading-relaxed max-w-lg space-y-4">
@@ -76,10 +89,10 @@ export default function Hero() {
                 <span>Get involved</span>
               </a>
             </div>
-          </div>
+            </div>
 
-          {/* Right: Visual Panel */}
-          <div className="relative">
+            {/* Right: Visual Panel */}
+            <div className="relative">
             {/* Main image frame */}
             <div className="relative aspect-[4/5] white-frame overflow-hidden">
               {/* Gradient overlay */}
@@ -90,7 +103,8 @@ export default function Hero() {
                 src="/photos/IMG_4330.JPG"
                 alt="WVG Community Event at Communitech"
                 fill
-                className="object-cover img-editorial"
+                className="object-cover"
+                style={{ filter: 'grayscale(60%) contrast(1.1)' }}
                 priority
               />
 
@@ -100,13 +114,14 @@ export default function Hero() {
             </div>
 
             {/* Floating metadata */}
-            <div className="absolute -bottom-6 -left-6 bg-black p-4 white-frame">
-              <p className="font-mono text-[10px] uppercase tracking-wider text-white/60">Location</p>
-              <p className="font-grotesk text-sm">Waterloo, ON</p>
+            <div className="absolute -bottom-6 -left-6 bg-black p-5 white-frame">
+              <p className="font-mono text-[10px] uppercase tracking-wider text-white/60 mb-1">Location</p>
+              <p className="font-grotesk text-lg font-semibold">Waterloo, ON</p>
             </div>
 
             {/* Decorative element */}
             <div className="absolute -top-4 -right-4 w-32 h-32 border border-white/10 -z-10" />
+          </div>
           </div>
         </div>
       </div>

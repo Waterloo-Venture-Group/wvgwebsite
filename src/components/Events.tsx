@@ -3,32 +3,32 @@ import Image from "next/image";
 const eventPhotos = [
   {
     src: "/photos/IMG_4016.JPG",
-    title: "Founder Fireside",
-    date: "Fall 2024",
+    title: "Talent Room with Theory Ventures",
+    date: "Winter 2026",
     location: "Waterloo, ON",
   },
   {
     src: "/photos/IMG_4090.jpg",
-    title: "Investor Dinner",
-    date: "Winter 2024",
-    location: "Toronto, ON",
+    title: "Off The Record: Exclusive Recruitment Dinner",
+    date: "Winter 2026",
+    location: "Waterloo, ON",
   },
   {
     src: "/photos/IMG_4002.JPG",
-    title: "WVG Summit",
-    date: "Fall 2024",
+    title: "Panel How Startups Hire",
+    date: "Winter 2026",
     location: "Waterloo, ON",
   },
   {
     src: "/photos/IMG_9744.JPG",
-    title: "Pitch Workshop",
-    date: "Winter 2024",
+    title: "Waterloo Tech Week: Whiteboard Stories with Northwood Family Office",
+    date: "Fall 2025",
     location: "Waterloo, ON",
   },
   {
     src: "/photos/IMG_9816.JPG",
-    title: "Community Meetup",
-    date: "Fall 2024",
+    title: "Student Workshop: Building a Vertical AI Venture",
+    date: "Spring 2025",
     location: "Waterloo, ON",
   },
 ];
@@ -80,7 +80,8 @@ export default function Events() {
                     src={event.src}
                     alt={event.title}
                     fill
-                    className="object-cover img-editorial"
+                    className="object-cover"
+                    style={{ filter: 'grayscale(60%) contrast(1.1)' }}
                   />
 
                   {/* Overlay gradient */}
@@ -113,7 +114,8 @@ export default function Events() {
                     src={event.src}
                     alt={event.title}
                     fill
-                    className="object-cover img-editorial"
+                    className="object-cover"
+                    style={{ filter: 'grayscale(60%) contrast(1.1)' }}
                   />
 
                   {/* Overlay gradient */}

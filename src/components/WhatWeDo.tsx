@@ -4,9 +4,18 @@ export default function WhatWeDo() {
       {/* Section divider */}
       <div className="section-divider mb-20" />
 
-      {/* Background gradient */}
+      {/* Background gradient and subtle grid */}
       <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-wvg-green/5 via-wvg-teal/5 via-wvg-blue/5 to-wvg-purple/5" />
         <div className="absolute top-0 right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-bl from-wvg-blue/10 to-transparent blur-[120px]" />
+        {/* Subtle notebook grid */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: `
+            linear-gradient(to right, white 1px, transparent 1px),
+            linear-gradient(to bottom, white 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px'
+        }} />
       </div>
 
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12">
@@ -38,24 +47,20 @@ export default function WhatWeDo() {
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-wvg-green via-wvg-teal to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               {/* Label */}
-              <div className="flex items-center gap-2 mb-6">
-                <span className="w-2 h-2 bg-wvg-green" />
-                <span className="font-mono text-[10px] uppercase tracking-widest text-wvg-green">For Founders</span>
+              <div className="mb-6">
+                <h3 className="font-grotesk text-2xl lg:text-3xl font-bold text-wvg-green">
+                  For Founders
+                </h3>
               </div>
 
               {/* Content */}
-              <h3 className="font-grotesk text-xl font-semibold mb-6">
-                Investors, co-founders, and early operators.
-              </h3>
-
               <div className="font-mono text-sm text-white/70 leading-relaxed space-y-4 mb-8">
                 <p>
-                  We help you find investors, co-founders, and early operators — and get 
+                  We help you find investors, co-founders and early operators – and get 
                   your story tight enough that when the moment comes, you're ready.
                 </p>
                 <p>
-                  Sometimes that looks like pitch work.
-                  Sometimes it's go-to-market clarity.
+                  Sometimes that looks like pitch work. Sometimes it's go-to-market clarity. 
                   Often it's just getting you in front of the right person sooner than 
                   you would have on your own.
                 </p>
@@ -78,23 +83,22 @@ export default function WhatWeDo() {
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-wvg-teal via-wvg-blue to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               {/* Label */}
-              <div className="flex items-center gap-2 mb-6">
-                <span className="w-2 h-2 bg-wvg-teal" />
-                <span className="font-mono text-[10px] uppercase tracking-widest text-wvg-teal">For Students</span>
+              <div className="mb-6">
+                <h3 className="font-grotesk text-2xl lg:text-3xl font-bold text-wvg-teal">
+                  For Students
+                </h3>
               </div>
 
               {/* Content */}
-              <h3 className="font-grotesk text-xl font-semibold mb-6">
-                Real work in rooms where people build.
-              </h3>
-
               <div className="font-mono text-sm text-white/70 leading-relaxed space-y-4 mb-8">
                 <p>
-                  We help you get real work — co-ops, new-grad roles, and early startup 
-                  experience — by putting you in rooms where people are building, not posturing.
+                  We'll put you in rooms where people are building, not posturing. We help you 
+                  get real work – co-ops, new-grad roles and early startup experience.
                 </p>
                 <p>
-                  You don't need to be loud.<br />
+                  You don't need to be loud.
+                </p>
+                <p>
                   You need to be useful, curious, and present.
                 </p>
               </div>
@@ -116,24 +120,25 @@ export default function WhatWeDo() {
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-wvg-purple via-wvg-blue to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               {/* Label */}
-              <div className="flex items-center gap-2 mb-6">
-                <span className="w-2 h-2 bg-wvg-purple" />
-                <span className="font-mono text-[10px] uppercase tracking-widest text-wvg-purple">For Funds & Partners</span>
+              <div className="mb-6">
+                <h3 className="font-grotesk text-2xl lg:text-3xl font-bold text-wvg-purple">
+                  For Funds & Partners
+                </h3>
               </div>
 
               {/* Content */}
-              <h3 className="font-grotesk text-xl font-semibold mb-6">
-                High-signal talent and companies, early.
-              </h3>
-
               <div className="font-mono text-sm text-white/70 leading-relaxed space-y-4 mb-8">
                 <p>
-                  We help you meet high-signal talent and future portfolio companies early — 
-                  before the hype cycle, before the pitch deck polish, before everyone else shows up.
+                  We help you meet high-signal talent and future portfolio companies early.
                 </p>
-                <p className="text-white/70">
-                  Quiet access beats loud branding.<br />
-                  Every time.
+                <p>
+                  Everyone else meets them after the polish.
+                </p>
+                <p>
+                  We introduce you when it's still messy, honest, and high-signal.
+                </p>
+                <p className="text-white/80 font-grotesk">
+                  Let's understand what ROI means for you.
                 </p>
               </div>
 

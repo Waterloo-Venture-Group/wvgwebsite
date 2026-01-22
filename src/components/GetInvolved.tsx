@@ -23,7 +23,8 @@ export default function GetInvolved() {
                 src="/photos/IMG_0580 (1).jpeg"
                 alt="WVG student community"
                 fill
-                className="object-cover img-editorial"
+                className="object-cover"
+                style={{ filter: 'grayscale(60%) contrast(1.1)' }}
               />
 
               {/* Corner accents */}
@@ -55,7 +56,7 @@ export default function GetInvolved() {
 
             <div className="font-mono text-sm text-white/70 leading-relaxed space-y-6">
               <p className="font-grotesk text-xl text-white/80">
-                WVG is for students who want to build, not wait.
+                WVG is for students like you who want to build, not wait.
               </p>
 
               <div className="py-6">
@@ -69,11 +70,11 @@ export default function GetInvolved() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 bg-wvg-teal mt-2 shrink-0" />
-                    <span>Venture exposure</span>
+                    <span>Invites to exclusive VC rooms</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 bg-wvg-teal mt-2 shrink-0" />
-                    <span>Co-op and new-grad roles in early-stage teams</span>
+                    <span>Co-op + new-grad roles in early-stage teams</span>
                   </li>
                 </ul>
               </div>
@@ -87,7 +88,7 @@ export default function GetInvolved() {
             {/* CTA */}
             <div className="mt-10">
               <a href="#contact" className="btn-primary">
-                <span>Join the talent network</span>
+                <span>23+ students matched with VCs + startups</span>
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
