@@ -122,18 +122,19 @@ const ventureStrategy = [
     image: "/photos/team/Headshot-Jester.png",
   },
   {
-    name: "Mihai Posea",
-    role: "Venture Strategy",
-    linkedin: "https://www.linkedin.com/in/mihaiposea/",
-    image: "/photos/team/Mihai-Headshot.jpg",
-  },
-  {
     name: "Ishir Lakhani",
     role: "Venture Strategy",
     linkedin: "https://www.linkedin.com/in/ishirl/",
     image: "/photos/team/Ishir-Headshot.jpg",
   },
 ];
+
+const mihaiPosea = {
+  name: "Mihai Posea",
+  role: "Podcast Host",
+  linkedin: "https://www.linkedin.com/in/mihaiposea/",
+  image: "/photos/team/Mihai-Headshot.jpg",
+};
 
 export default function Team() {
   return (
@@ -155,92 +156,6 @@ export default function Team() {
         backgroundSize: '30px 30px'
       }} />
 
-      {/* Moving crane drawing - 300% larger, technical blueprint style */}
-      <div className="absolute top-0 right-0 w-full h-96 pointer-events-none overflow-hidden">
-        <svg 
-          className="absolute top-0 right-0 h-96 w-auto animate-slide-in"
-          viewBox="0 0 400 300"
-          style={{ animation: 'slideInCrane 2s ease-out forwards' }}
-        >
-          <g stroke="rgba(255,255,255,0.2)" strokeWidth="1.2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-            {/* Lattice Tower (Mast) - Right side */}
-            {/* Vertical lattice structure */}
-            <line x1="350" y1="280" x2="350" y2="100" />
-            <line x1="340" y1="280" x2="340" y2="100" />
-            <line x1="360" y1="280" x2="360" y2="100" />
-            
-            {/* Horizontal lattice braces */}
-            <line x1="340" y1="260" x2="360" y2="260" />
-            <line x1="340" y1="240" x2="360" y2="240" />
-            <line x1="340" y1="220" x2="360" y2="220" />
-            <line x1="340" y1="200" x2="360" y2="200" />
-            <line x1="340" y1="180" x2="360" y2="180" />
-            <line x1="340" y1="160" x2="360" y2="160" />
-            <line x1="340" y1="140" x2="360" y2="140" />
-            <line x1="340" y1="120" x2="360" y2="120" />
-            
-            {/* Diagonal lattice braces */}
-            <line x1="340" y1="260" x2="360" y2="240" />
-            <line x1="360" y1="260" x2="340" y2="240" />
-            <line x1="340" y1="220" x2="360" y2="200" />
-            <line x1="360" y1="220" x2="340" y2="200" />
-            <line x1="340" y1="180" x2="360" y2="160" />
-            <line x1="360" y1="180" x2="340" y2="160" />
-            <line x1="340" y1="140" x2="360" y2="120" />
-            <line x1="360" y1="140" x2="340" y2="120" />
-            
-            {/* Slewing Unit - Top of tower */}
-            <rect x="335" y="95" width="30" height="15" rx="2" />
-            <line x1="350" y1="95" x2="350" y2="85" />
-            
-            {/* Small mast on slewing unit */}
-            <line x1="350" y1="85" x2="350" y2="70" />
-            <circle cx="350" cy="70" r="3" />
-            
-            {/* Main Jib (Working Arm) - Extending left and up */}
-            {/* Jib lattice structure */}
-            <line x1="350" y1="100" x2="200" y2="50" />
-            <line x1="345" y1="98" x2="195" y2="48" />
-            <line x1="355" y1="98" x2="205" y2="48" />
-            
-            {/* Jib horizontal braces */}
-            <line x1="320" y1="95" x2="220" y2="52" />
-            <line x1="300" y1="90" x2="230" y2="51" />
-            <line x1="280" y1="85" x2="240" y2="50" />
-            <line x1="260" y1="80" x2="250" y2="49" />
-            
-            {/* Jib diagonal braces */}
-            <line x1="345" y1="98" x2="320" y2="95" />
-            <line x1="320" y1="95" x2="300" y2="90" />
-            <line x1="300" y1="90" x2="280" y2="85" />
-            <line x1="280" y1="85" x2="260" y2="80" />
-            <line x1="260" y1="80" x2="240" y2="50" />
-            
-            {/* Trolley on jib */}
-            <rect x="195" y="45" width="12" height="8" rx="1" />
-            <line x1="201" y1="53" x2="201" y2="70" />
-            
-            {/* Hoist cable and hook */}
-            <line x1="201" y1="70" x2="201" y2="120" />
-            <ellipse cx="201" cy="125" rx="4" ry="6" />
-            <path d="M 201 131 L 199 135 L 201 137 L 203 135 Z" />
-            
-            {/* Counter-Jib (Right side) */}
-            <line x1="350" y1="100" x2="380" y2="105" />
-            <line x1="345" y1="98" x2="375" y2="103" />
-            <line x1="355" y1="98" x2="385" y2="103" />
-            <line x1="375" y1="103" x2="385" y2="103" />
-            
-            {/* Counterweights */}
-            <rect x="378" y="102" width="10" height="8" rx="1" />
-            
-            {/* Support cables from mast top to jib ends */}
-            <line x1="350" y1="70" x2="200" y2="50" />
-            <line x1="350" y1="70" x2="380" y2="105" />
-          </g>
-        </svg>
-      </div>
-
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Section header */}
         <div className="flex items-center gap-4 mb-12 relative">
@@ -252,8 +167,22 @@ export default function Team() {
         {/* Team grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mb-20">
           {leadership.map((member, index) => (
-            <div key={index} className="group">
-              <div className="white-frame p-6 lg:p-8 h-full transition-all duration-300 group-hover:border-wvg-teal/50">
+            <div key={index} className="group relative">
+              {/* Purple and blue fading glow behind cards */}
+              <div className="absolute inset-0 -z-10 opacity-40">
+                <div 
+                  className="absolute inset-0 rounded-full blur-3xl"
+                  style={{
+                    background: `radial-gradient(circle, 
+                      rgba(227, 133, 236, 0.3) 0%,
+                      rgba(0, 74, 173, 0.2) 50%,
+                      transparent 100%)`,
+                    animation: 'auraGlow 4s ease-in-out infinite',
+                  }}
+                />
+              </div>
+              
+              <div className="white-frame p-6 lg:p-8 h-full transition-all duration-300 group-hover:border-wvg-teal/50 relative z-10">
                 {/* Image with moving aura glow */}
                 <div className="relative aspect-square mb-6 overflow-hidden white-frame">
                   {/* Moving aura glow */}
@@ -388,6 +317,61 @@ export default function Team() {
                 </div>
               </div>
             ))}
+          </div>
+          
+          {/* Podcast Status Text with Purple Emphasis */}
+          <div className="mt-6 lg:mt-8 mb-4 lg:mb-6 relative">
+            <div className="relative inline-block">
+              {/* Purple glow behind text */}
+              <div className="absolute inset-0 bg-gradient-to-r from-wvg-purple/30 via-wvg-blue/20 to-wvg-purple/30 blur-2xl rounded-lg -z-10" />
+              <p className="font-mono text-lg lg:text-xl uppercase tracking-widest text-wvg-purple font-semibold">
+                IN PROGRESS // Podcast coming soon
+              </p>
+            </div>
+          </div>
+
+          {/* Mihai - Podcast Host - Full width horizontal card */}
+          <div className="group w-full">
+            <div className="white-frame p-6 lg:p-8 transition-all duration-300 group-hover:border-wvg-purple/50 relative">
+              {/* Purple glow behind card */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10">
+                <div className="absolute inset-0 bg-gradient-to-br from-wvg-purple/10 via-wvg-blue/5 to-wvg-purple/10 blur-xl rounded-sm" />
+              </div>
+              
+              {/* Horizontal layout: image left, info right */}
+              <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center lg:items-start">
+                {/* Image */}
+                <div className="relative w-32 h-32 lg:w-40 lg:h-40 flex-shrink-0 overflow-hidden white-frame aspect-square">
+                  <Image
+                    src={mihaiPosea.image}
+                    alt={mihaiPosea.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                
+                {/* Info */}
+                <div className="flex-1">
+                  <h4 className="font-grotesk text-lg lg:text-xl font-semibold mb-2 text-wvg-purple">
+                    {mihaiPosea.name}
+                  </h4>
+                  <p className="font-mono text-sm lg:text-base text-white/60 mb-4 leading-relaxed">
+                    {mihaiPosea.role}
+                  </p>
+                  <a
+                    href={mihaiPosea.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-wvg-purple hover:text-white transition-colors"
+                  >
+                    <span>LinkedIn</span>
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

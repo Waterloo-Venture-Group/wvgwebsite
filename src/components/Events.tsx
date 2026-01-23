@@ -15,7 +15,7 @@ const eventPhotos = [
   },
   {
     src: "/photos/IMG_4002.JPG",
-    title: "Panel How Startups Hire",
+    title: "CTO Panel: How Startups Hire",
     date: "Winter 2026",
     location: "Waterloo, ON",
   },
@@ -35,7 +35,7 @@ const eventPhotos = [
 
 export default function Events() {
   return (
-    <section id="events" className="py-16 lg:py-20 relative">
+    <section id="events" className="py-8 lg:py-10 relative">
       {/* Section divider */}
       <div className="section-divider mb-16" />
 
@@ -59,7 +59,7 @@ export default function Events() {
             </p>
           </div>
           <a href="#contact" className="btn-primary shrink-0">
-            <span>Partner with us</span>
+            <span>Let's build one for you - see how</span>
           </a>
         </div>
 

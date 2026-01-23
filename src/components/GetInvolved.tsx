@@ -15,7 +15,7 @@ export default function GetInvolved() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Left: Visual */}
           <div className="relative order-2 lg:order-1">
-            <div className="relative aspect-[4/5] white-frame overflow-hidden">
+            <div className="relative aspect-[4/2.5] white-frame overflow-hidden">
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-bl from-wvg-teal/20 via-transparent to-wvg-blue/10 z-10" />
               
@@ -24,6 +24,7 @@ export default function GetInvolved() {
                 alt="WVG student community"
                 fill
                 className="object-cover"
+                style={{ objectPosition: 'center 30%' }}
               />
 
               {/* Corner accents */}
@@ -87,7 +88,7 @@ export default function GetInvolved() {
             {/* CTA */}
             <div className="mt-10">
               <a href="#contact" className="btn-primary">
-                <span>23+ students matched with VCs + startups</span>
+                <span>Join the 23+ students matched with VCs + startups</span>
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

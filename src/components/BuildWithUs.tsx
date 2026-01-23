@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function BuildWithUs() {
   return (
-    <section id="build-with-us" className="py-16 lg:py-20 relative">
+    <section id="build-with-us" className="py-4 lg:py-5 relative">
       {/* Section divider */}
       <div className="section-divider mb-16" />
 
@@ -26,7 +26,7 @@ export default function BuildWithUs() {
             <div className="font-mono text-sm text-white/70 leading-relaxed space-y-6">
               <div className="py-6">
                 <p className="font-mono text-[10px] uppercase tracking-widest text-wvg-green mb-4">
-                  Support includes
+                  Early-stage founder support includes
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">

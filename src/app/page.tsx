@@ -21,7 +21,6 @@ export default function Home() {
       <Story />
       <WhatWeDo />
       <Signals />
-      <Supporters />
       <Events />
       <BuildWithUs />
       <GetInvolved />

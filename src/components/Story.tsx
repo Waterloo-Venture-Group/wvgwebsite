@@ -86,9 +86,14 @@ export default function Story() {
         </div>
 
         {/* And so we founded WVG section - full width, bold */}
-        <div className="w-full">
-          <div className="font-mono text-base lg:text-lg text-white/80 leading-relaxed space-y-6">
-            <p className="font-editorial text-3xl lg:text-4xl text-white mb-6">
+        <div className="w-full relative">
+          {/* Purple spotlight from right */}
+          <div className="absolute top-0 right-0 w-[600px] h-[400px] pointer-events-none">
+            <div className="absolute inset-0 bg-gradient-to-l from-wvg-purple/20 via-wvg-purple/10 to-transparent blur-[120px]" />
+          </div>
+          
+          <div className="relative font-mono text-base lg:text-lg text-white/80 leading-relaxed space-y-6">
+            <p className="font-editorial text-3xl lg:text-4xl text-white mb-6 relative z-10">
               And so we founded WVG.
             </p>
             <p className="text-white/90">

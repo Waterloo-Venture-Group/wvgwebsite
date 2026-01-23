@@ -42,13 +42,16 @@ export default function WhatWeDo() {
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-6">
           {/* Pillar 1: For Founders */}
           <div className="group relative">
-            <div className="white-frame p-8 lg:p-10 h-full transition-all duration-300 group-hover:border-wvg-green/50">
+            <div className="white-frame p-8 lg:p-10 h-full transition-all duration-300 group-hover:border-wvg-green/50 relative overflow-hidden">
+              {/* Green glow behind title */}
+              <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-wvg-green/10 to-transparent blur-2xl opacity-50" />
+              
               {/* Gradient accent */}
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-wvg-green via-wvg-teal to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               {/* Label */}
-              <div className="mb-6">
-                <h3 className="font-grotesk text-2xl lg:text-3xl font-bold text-wvg-green">
+              <div className="mb-6 relative z-10">
+                <h3 className="font-editorial text-2xl lg:text-3xl font-bold text-wvg-green">
                   For Founders
                 </h3>
               </div>
@@ -60,7 +63,7 @@ export default function WhatWeDo() {
                   your story tight enough that when the moment comes, you're ready.
                 </p>
                 <p>
-                  Sometimes that looks like pitch work. Sometimes it's go-to-market clarity. 
+                  Sometimes that looks like pitch work or GTM clarity. 
                   Often it's just getting you in front of the right person sooner than 
                   you would have on your own.
                 </p>
@@ -78,13 +81,16 @@ export default function WhatWeDo() {
 
           {/* Pillar 2: For Students */}
           <div className="group relative">
-            <div className="white-frame p-8 lg:p-10 h-full transition-all duration-300 group-hover:border-wvg-teal/50">
+            <div className="white-frame p-8 lg:p-10 h-full transition-all duration-300 group-hover:border-wvg-teal/50 relative overflow-hidden">
+              {/* Teal glow behind title */}
+              <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-wvg-teal/10 to-transparent blur-2xl opacity-50" />
+              
               {/* Gradient accent */}
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-wvg-teal via-wvg-blue to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               {/* Label */}
-              <div className="mb-6">
-                <h3 className="font-grotesk text-2xl lg:text-3xl font-bold text-wvg-teal">
+              <div className="mb-6 relative z-10">
+                <h3 className="font-editorial text-2xl lg:text-3xl font-bold text-wvg-teal">
                   For Students
                 </h3>
               </div>
@@ -115,13 +121,16 @@ export default function WhatWeDo() {
 
           {/* Pillar 3: For Funds */}
           <div className="group relative">
-            <div className="white-frame p-8 lg:p-10 h-full transition-all duration-300 group-hover:border-wvg-purple/50">
+            <div className="white-frame p-8 lg:p-10 h-full transition-all duration-300 group-hover:border-wvg-purple/50 relative overflow-hidden">
+              {/* Purple glow behind title */}
+              <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-wvg-purple/10 to-transparent blur-2xl opacity-50" />
+              
               {/* Gradient accent */}
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-wvg-purple via-wvg-blue to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               {/* Label */}
-              <div className="mb-6">
-                <h3 className="font-grotesk text-2xl lg:text-3xl font-bold text-wvg-purple">
+              <div className="mb-6 relative z-10">
+                <h3 className="font-editorial text-2xl lg:text-3xl font-bold text-wvg-purple">
                   For Funds & Partners
                 </h3>
               </div>
@@ -137,7 +146,7 @@ export default function WhatWeDo() {
                 <p>
                   We introduce you when it's still messy, honest, and high-signal.
                 </p>
-                <p className="text-white/80 font-grotesk">
+                <p className="text-white/80 font-mono">
                   Let's understand what ROI means for you.
                 </p>
               </div>
