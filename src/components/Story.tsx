@@ -46,87 +46,42 @@ export default function Story() {
 
         {/* Wall section - full width */}
         <div className="mb-16">
-          <p className="font-grotesk text-3xl lg:text-4xl text-white/90 leading-snug mb-8">
-            At some point, everyone hits the same wall.
-          </p>
-
-          {/* Editorial blocks */}
-          <div className="space-y-6 font-mono text-sm text-white/70 leading-relaxed">
-            <div className="editorial-block">
-              <p>
-                Founders stall between "this could be something" and "this is real."
+          {/* Vertical layout */}
+          <div className="space-y-8">
+            {/* Main statement - single line, full width */}
+            <p className="font-editorial text-3xl lg:text-4xl text-white leading-tight">
+              At some point, everyone hits the same wall.
+            </p>
+            
+            {/* Editorial blocks */}
+            <div className="space-y-4 font-mono text-sm text-white/70 leading-relaxed pt-2">
+              <div className="editorial-block">
+                <p className="break-words">
+                  Founders stall between "this could be something" and "this is real."
+                </p>
+              </div>
+              <div className="editorial-block">
+                <p className="break-words">
+                  Students know they're capable, but don't know how to get a real shot.
+                </p>
+              </div>
+              <div className="editorial-block">
+                <p className="break-words">
+                  Funds want signal — early looks at talent and portfolio companies.
+                </p>
+              </div>
+            </div>
+            
+            {/* Thesis - new aesthetic, not a box */}
+            <div className="space-y-2">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-[1px] bg-wvg-teal/50" />
+                <span className="font-mono text-[10px] uppercase tracking-widest text-wvg-teal">Thesis</span>
+              </div>
+              <p className="font-grotesk text-xl lg:text-2xl text-white/90 leading-relaxed pl-11">
+                If you curate the room well enough, the right things happen.
               </p>
             </div>
-            <div className="editorial-block">
-              <p>
-                Students know they're capable, but don't know how to get a real shot.
-              </p>
-            </div>
-            <div className="editorial-block">
-              <p>
-                Funds want signal — early looks at talent, founders, and future portfolio 
-                companies before they're obvious.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Thesis bubble - same size, underneath */}
-        <div className="mb-20">
-          <div className="white-frame p-8 lg:p-10 relative max-w-2xl">
-            <div className="absolute -top-3 left-6 bg-black px-3">
-              <span className="font-mono text-[10px] uppercase tracking-widest text-wvg-teal">Thesis</span>
-            </div>
-            <p className="font-grotesk text-2xl lg:text-3xl leading-relaxed">
-              If you curate the room well enough, the right things happen.
-            </p>
-          </div>
-        </div>
-
-        {/* Where things move section with icons */}
-        <div className="mb-20 space-y-8">
-          <div className="flex items-start gap-4">
-            <div className="mt-1 shrink-0">
-              <svg className="w-6 h-6 text-wvg-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-            </div>
-            <p className="font-grotesk text-xl lg:text-2xl text-white/90 leading-relaxed">
-              So we started paying attention to where things actually move.
-            </p>
-          </div>
-
-          <div className="flex items-start gap-4">
-            <div className="mt-1 shrink-0">
-              <svg className="w-5 h-5 text-wvg-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-              </svg>
-            </div>
-            <p className="font-editorial text-lg lg:text-xl text-white/80">
-              Dinner tables.
-            </p>
-          </div>
-
-          <div className="flex items-start gap-4">
-            <div className="mt-1 shrink-0">
-              <svg className="w-5 h-5 text-wvg-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-            </div>
-            <p className="font-editorial text-lg lg:text-xl text-white/80">
-              Whiteboards.
-            </p>
-          </div>
-
-          <div className="flex items-start gap-4">
-            <div className="mt-1 shrink-0">
-              <svg className="w-5 h-5 text-wvg-purple" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-              </svg>
-            </div>
-            <p className="font-editorial text-lg lg:text-xl text-white/80">
-              Side conversations that turn into texts the next morning.
-            </p>
           </div>
         </div>
 

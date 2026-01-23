@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const socialLinks = [
   {
     name: "Instagram",
@@ -42,11 +44,15 @@ const socialLinks = [
   {
     name: "Luma",
     handle: "Events",
-    url: "https://lu.ma/user/wvg",
+    url: "https://luma.com/user/wvg",
     icon: (
-      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-      </svg>
+      <div className="w-5 h-5 relative flex items-center justify-center shrink-0">
+        <img
+          src="/photos/supporters/luma.png"
+          alt="Luma"
+          className="w-full h-full object-contain brightness-0 invert opacity-40 group-hover:opacity-100 transition-opacity duration-300"
+        />
+      </div>
     ),
   },
   {
@@ -103,7 +109,7 @@ export default function Socials() {
                 {/* Gradient background on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${gradientColors[index % gradientColors.length]} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
                 <div className="relative flex items-center gap-4">
-                  <div className="text-white/40 group-hover:text-white transition-colors">
+                  <div className="text-white/40 group-hover:text-white transition-colors [&_img]:group-hover:opacity-100">
                     {social.icon}
                   </div>
                   <div>

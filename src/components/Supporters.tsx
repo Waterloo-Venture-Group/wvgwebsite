@@ -5,31 +5,37 @@ const supporters = [
     name: "Opennote",
     description: "$1.2M raise (YC) + pitch deck support",
     logo: "/photos/supporters/opennote.png",
+    url: "https://www.opennote.com/",
   },
   {
     name: "Golden Ventures",
     description: "Fireside Chat + Toronto Tech Week",
     logo: "/photos/supporters/goldenventures.png",
+    url: "https://www.golden.ventures/",
   },
   {
     name: "Ripple Ventures",
     description: "Waterloo Tech Week Co-founder Matching",
     logo: "/photos/supporters/rippleventures.png",
+    url: "https://www.rippleventures.com/",
   },
   {
     name: "Theory Ventures",
-    description: "Exclusive Recruitment Dinner & 150+ attendee Fireside",
+    description: "Recruitment Dinner & 150+ attendee Fireside",
     logo: "/photos/supporters/theoryventures.svg",
+    url: "https://theoryvc.com/",
   },
   {
     name: "Northwood Family Office",
     description: "Waterloo Tech Week Fireside Chat",
     logo: "/photos/supporters/northwood.png",
+    url: "https://www.northwoodfamilyoffice.com/",
   },
   {
     name: "Polarity Labs",
     description: "Pitch and raise support",
     logo: "/photos/supporters/polarity.png",
+    url: "https://www.polarity.cc/",
   },
 ];
 
@@ -55,12 +61,15 @@ export default function Supporters() {
         {/* Supporters grid */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {supporters.map((supporter, index) => (
-            <div
+            <a
               key={index}
-              className="group relative"
+              href={supporter.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative block"
             >
               {/* Card container */}
-              <div className="relative p-8 lg:p-10 white-frame transition-all duration-500 group-hover:border-wvg-blue/50 group-hover:border-wvg-purple/50">
+              <div className="relative p-8 lg:p-10 white-frame transition-all duration-500 group-hover:border-wvg-blue/50 group-hover:border-wvg-purple/50 cursor-pointer">
                 {/* Gradient border on hover */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-sm">
                   <div 
@@ -117,7 +126,7 @@ export default function Supporters() {
                   </p>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
