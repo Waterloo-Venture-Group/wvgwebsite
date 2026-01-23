@@ -50,7 +50,7 @@ const socialLinks = [
         <img
           src="/photos/supporters/luma.png"
           alt="Luma"
-          className="w-full h-full object-contain brightness-0 invert opacity-40 group-hover:opacity-100 transition-opacity duration-300"
+          className="w-full h-full object-contain invert opacity-40 group-hover:opacity-100 transition-opacity duration-300"
         />
       </div>
     ),

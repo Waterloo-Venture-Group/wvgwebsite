@@ -129,13 +129,6 @@ const ventureStrategy = [
   },
 ];
 
-const mihaiPosea = {
-  name: "Mihai Posea",
-  role: "Podcast Host",
-  linkedin: "https://www.linkedin.com/in/mihaiposea/",
-  image: "/photos/team/Mihai-Headshot.jpg",
-};
-
 export default function Team() {
   return (
     <section id="team" className="py-16 lg:py-20 relative overflow-hidden">
@@ -317,61 +310,6 @@ export default function Team() {
                 </div>
               </div>
             ))}
-          </div>
-          
-          {/* Podcast Status Text with Purple Emphasis */}
-          <div className="mt-6 lg:mt-8 mb-4 lg:mb-6 relative">
-            <div className="relative inline-block">
-              {/* Purple glow behind text */}
-              <div className="absolute inset-0 bg-gradient-to-r from-wvg-purple/30 via-wvg-blue/20 to-wvg-purple/30 blur-2xl rounded-lg -z-10" />
-              <p className="font-mono text-lg lg:text-xl uppercase tracking-widest text-wvg-purple font-semibold">
-                IN PROGRESS // Podcast coming soon
-              </p>
-            </div>
-          </div>
-
-          {/* Mihai - Podcast Host - Full width horizontal card */}
-          <div className="group w-full">
-            <div className="white-frame p-6 lg:p-8 transition-all duration-300 group-hover:border-wvg-purple/50 relative">
-              {/* Purple glow behind card */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10">
-                <div className="absolute inset-0 bg-gradient-to-br from-wvg-purple/10 via-wvg-blue/5 to-wvg-purple/10 blur-xl rounded-sm" />
-              </div>
-              
-              {/* Horizontal layout: image left, info right */}
-              <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-center lg:items-start">
-                {/* Image */}
-                <div className="relative w-32 h-32 lg:w-40 lg:h-40 flex-shrink-0 overflow-hidden white-frame aspect-square">
-                  <Image
-                    src={mihaiPosea.image}
-                    alt={mihaiPosea.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                
-                {/* Info */}
-                <div className="flex-1">
-                  <h4 className="font-grotesk text-lg lg:text-xl font-semibold mb-2 text-wvg-purple">
-                    {mihaiPosea.name}
-                  </h4>
-                  <p className="font-mono text-sm lg:text-base text-white/60 mb-4 leading-relaxed">
-                    {mihaiPosea.role}
-                  </p>
-                  <a
-                    href={mihaiPosea.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-wvg-purple hover:text-white transition-colors"
-                  >
-                    <span>LinkedIn</span>
-                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

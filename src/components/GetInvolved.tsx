@@ -24,7 +24,7 @@ export default function GetInvolved() {
                 alt="WVG student community"
                 fill
                 className="object-cover"
-                style={{ objectPosition: 'center 30%' }}
+                style={{ objectPosition: 'center 70%' }}
               />
 
               {/* Corner accents */}
