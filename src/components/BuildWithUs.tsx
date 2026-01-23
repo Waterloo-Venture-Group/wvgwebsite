@@ -17,7 +17,7 @@ export default function BuildWithUs() {
           <div>
             {/* Section header */}
             <div className="flex items-center gap-4 mb-8">
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">05</span>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">06</span>
               <div className="w-12 h-[1px] bg-white/20" />
             </div>
             

@@ -49,7 +49,7 @@ export default function Events() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
           <div>
             <div className="flex items-center gap-4 mb-4">
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">04</span>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">05</span>
               <div className="w-12 h-[1px] bg-white/20" />
             </div>
             <h2 className="font-editorial text-5xl lg:text-6xl mb-4">Rooms we built</h2>

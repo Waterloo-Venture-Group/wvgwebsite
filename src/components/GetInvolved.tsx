@@ -47,7 +47,7 @@ export default function GetInvolved() {
           <div className="order-1 lg:order-2">
             {/* Section header */}
             <div className="flex items-center gap-4 mb-8">
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">06</span>
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">07</span>
               <div className="w-12 h-[1px] bg-white/20" />
             </div>
             

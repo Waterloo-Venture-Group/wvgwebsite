@@ -76,7 +76,7 @@ export default function Socials() {
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="flex items-center gap-4 mb-12">
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">08</span>
+          <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">09</span>
           <div className="w-12 h-[1px] bg-white/20" />
           <h2 className="font-editorial text-3xl lg:text-4xl">Socials</h2>
         </div>

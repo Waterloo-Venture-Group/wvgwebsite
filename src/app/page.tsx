@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Story from "@/components/Story";
 import WhatWeDo from "@/components/WhatWeDo";
 import Signals from "@/components/Signals";
+import Supporters from "@/components/Supporters";
 import Events from "@/components/Events";
 import BuildWithUs from "@/components/BuildWithUs";
 import GetInvolved from "@/components/GetInvolved";
@@ -20,6 +21,7 @@ export default function Home() {
       <Story />
       <WhatWeDo />
       <Signals />
+      <Supporters />
       <Events />
       <BuildWithUs />
       <GetInvolved />
