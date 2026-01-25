@@ -74,7 +74,7 @@ const communicationsGrowth = [
     name: "Ammar",
     role: "Ecosystem Partnerships",
     linkedin: "https://www.linkedin.com/in/ammar-adam/",
-    image: "/photos/team/Headshot-Ammar.jpg",
+    image: "/photos/team/Ammar-Headshot-New.jpg",
   },
 ];
 

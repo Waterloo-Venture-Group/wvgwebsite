@@ -19,14 +19,36 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // TODO: Integrate with backend API
-    console.log("Form submission:", formData);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // Simulate submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+      const data = await response.json();
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      setIsSubmitted(true);
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        organization: "",
+        intent: "partner" as Intent,
+        message: "",
+      });
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Failed to send message. Please try again or email us directly at waterloovg@gmail.com');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
