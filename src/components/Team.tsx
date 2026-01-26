@@ -71,7 +71,7 @@ const communicationsGrowth = [
     image: "/photos/team/Headshot-Yash.jpg",
   },
   {
-    name: "Ammar",
+    name: "Ammar Adam",
     role: "Ecosystem Partnerships",
     linkedin: "https://www.linkedin.com/in/ammar-adam/",
     image: "/photos/team/Ammar-Headshot-New.jpg",
