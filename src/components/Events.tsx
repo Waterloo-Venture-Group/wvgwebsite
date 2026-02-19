@@ -4,42 +4,83 @@ const LUMA_URL = "https://lu.ma/user/wvg";
 
 const events = [
   {
-    src: "/photos/IMG_4016.JPG",
+    src: "/photos/events/opennote_yc.jpg",
+    title: "Opennote (YC S25) Group Build Sprint",
+    date: "Winter 2026",
+    location: "Waterloo, ON",
+    category: "upcoming" as const,
+    url: "https://luma.com/0jc5qnb4",
+  },
+  {
+    src: "/photos/events/alisonkaizer.jpeg",
+    title: "Fireside Chat with Alison Kaizer from Golden Ventures",
+    date: "Winter 2026",
+    location: "Virtual",
+    category: "past" as const,
+    url: "https://www.linkedin.com/posts/waterlooventuregroup_landing-a-student-role-in-venture-startups-activity-7429415519943827456-opxV?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
+  },
+  {
+    src: "/photos/events/theoryventures_talentroom.JPG",
     title: "Talent Room with Theory Ventures",
     date: "Winter 2026",
     location: "Waterloo, ON",
-    category: "upcoming" as const,
-    url: LUMA_URL,
+    category: "past" as const,
+    url: "https://www.linkedin.com/posts/waterlooventuregroup_maplevalley-waterloo-tech-activity-7421336000599060480-HApl?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
   },
   {
-    src: "/photos/IMG_4090.jpg",
-    title: "Off The Record: Exclusive Recruitment Dinner",
+    src: "/photos/events/exclusivedinner.jpeg",
+    title: "Off The Record: Private Recruitment Dinner",
     date: "Winter 2026",
     location: "Waterloo, ON",
-    category: "upcoming" as const,
-    url: LUMA_URL,
+    category: "past" as const,
   },
   {
-    src: "/photos/IMG_4002.JPG",
-    title: "CTO Panel: How Startups Hire",
-    date: "Winter 2026",
+    src: "/photos/events/golden_dinner.jpg",
+    title: "Golden Ventures Exclusive Founder Dinner",
+    date: "Fall 2025",
     location: "Waterloo, ON",
-    category: "upcoming" as const,
-    url: LUMA_URL,
+    category: "past" as const,
+    url: "https://www.linkedin.com/posts/waterlooventuregroup_venture-waterlooecosystem-maplevalley-activity-7397122381510516736-kaNT?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
   },
   {
-    src: "/photos/IMG_9744.JPG",
+    src: "/photos/events/dsc_workshop2.JPG",
+    title: "Student Workshop: Building a Vertical AI Venture",
+    date: "Fall 2025",
+    location: "Waterloo, ON",
+    category: "past" as const,
+    url: "https://www.linkedin.com/posts/waterlooventuregroup_waterlooventuregroup-founderfuel-activity-7376294491600867328-wmeG?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
+  },
+  {
+    src: "/photos/events/northwood_whiteboard.JPG",
     title: "Waterloo Tech Week: Whiteboard Stories with Northwood Family Office",
     date: "Fall 2025",
     location: "Waterloo, ON",
     category: "past" as const,
+    url: "https://www.linkedin.com/posts/douglas-barker_finding-your-path-after-graduation-isnt-activity-7365799673330094080-RdlS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
   },
   {
-    src: "/photos/IMG_9816.JPG",
-    title: "Student Workshop: Building a Vertical AI Venture",
-    date: "Spring 2025",
+    src: "/photos/events/comms_team.JPG",
+    title: "Waterloo Tech Week: Ripple Ventures Co-Working for Founders",
+    date: "Fall 2025",
     location: "Waterloo, ON",
     category: "past" as const,
+    url: "https://www.linkedin.com/posts/waterlooventuregroup_waterlootechweek-venturecapital-tech-activity-7370671027644702721-HW-u?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
+  },
+  {
+    src: "/photos/events/juliabaird.jpg",
+    title: "Whiteboard Stories with Julia Baird from Golden Ventures",
+    date: "Summer 2025",
+    location: "Virtual",
+    category: "past" as const,
+    url: "https://www.linkedin.com/posts/waterlooventuregroup_venture-capital-needs-more-voices-and-we-activity-7348823843630690305-vIei?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
+  },
+  {
+    src: "/photos/events/dsc_workshop1.JPG",
+    title: "Student Workshop: Launching an AI Business",
+    date: "Summer 2025",
+    location: "Waterloo, ON",
+    category: "past" as const,
+    url: "https://www.linkedin.com/posts/waterlooventuregroup_from-idea-validation-pitch-all-in-one-activity-7335462698316451840-Mfrn?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
   },
 ];
 
@@ -93,7 +134,6 @@ export default function Events() {
                     alt={event.title}
                     fill
                     className="object-cover"
-                    style={{ filter: 'grayscale(100%) contrast(1.1)' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
@@ -117,8 +157,8 @@ export default function Events() {
         <div>
           <p className="font-mono text-[10px] uppercase tracking-widest text-white/50 mb-6">Past events</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {pastEvents.map((event, index) => (
-              <div key={index} className="group">
+            {pastEvents.map((event, index) => {
+              const card = (
                 <div className="relative aspect-[4/3] white-frame overflow-hidden card-hover">
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none gradient-border" />
                   <Image
@@ -131,15 +171,29 @@ export default function Events() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
                     <h3 className="font-editorial text-2xl mb-2">{event.title}</h3>
-                    <div className="flex items-center gap-4 font-mono text-[10px] uppercase tracking-wider text-white/70">
+                    <div className="flex items-center gap-4 font-mono text-[10px] uppercase tracking-wider text-white/70 mb-4">
                       <span>{event.date}</span>
                       <span className="w-1 h-1 rounded-full bg-white/30" />
                       <span>{event.location}</span>
                     </div>
+                    {event.url && (
+                      <span className="font-mono text-xs uppercase tracking-wider text-wvg-teal group-hover:underline">
+                        View post →
+                      </span>
+                    )}
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+              return event.url ? (
+                <a key={index} href={event.url} target="_blank" rel="noopener noreferrer" className="group block">
+                  {card}
+                </a>
+              ) : (
+                <div key={index} className="group">
+                  {card}
+                </div>
+              );
+            })}
           </div>
         </div>
 
