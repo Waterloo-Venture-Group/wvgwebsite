@@ -8,7 +8,6 @@ import Events from "@/components/Events";
 import BuildWithUs from "@/components/BuildWithUs";
 import GetInvolved from "@/components/GetInvolved";
 import Team from "@/components/Team";
-import EventList from "@/components/EventList";
 import Socials from "@/components/Socials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -25,7 +24,6 @@ export default function Home() {
       <BuildWithUs />
       <GetInvolved />
       <Team />
-      <EventList />
       <Socials />
       <Contact />
       <Footer />

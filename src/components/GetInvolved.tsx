@@ -47,12 +47,9 @@ export default function GetInvolved() {
           {/* Right: Content */}
           <div className="order-1 lg:order-2">
             {/* Section header */}
-            <div className="flex items-center gap-4 mb-8">
-              <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">07</span>
-              <div className="w-12 h-[1px] bg-white/20" />
+            <div className="border-l-2 border-wvg-teal/50 pl-6 mb-8">
+              <h2 className="font-editorial text-5xl lg:text-6xl">Get involved</h2>
             </div>
-            
-            <h2 className="font-editorial text-5xl lg:text-6xl mb-8">Get involved</h2>
 
             <div className="font-mono text-sm text-white/70 leading-relaxed space-y-6">
               <p className="font-grotesk text-xl text-white/80">

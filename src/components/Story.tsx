@@ -38,9 +38,7 @@ export default function Story() {
 
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Section header */}
-        <div className="flex items-center gap-4 mb-12">
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">01</span>
-          <div className="w-12 h-[1px] bg-white/20" />
+        <div className="border-l-2 border-wvg-teal/50 pl-6 mb-12">
           <h2 className="font-editorial text-5xl lg:text-6xl">The story</h2>
         </div>
 
@@ -54,34 +52,20 @@ export default function Story() {
             </p>
             
             {/* Editorial blocks */}
-            <div className="space-y-4 font-mono text-sm text-white/70 leading-relaxed pt-2">
-              <div className="editorial-block">
-                <p className="break-words">
-                  Founders stall between "this could be something" and "this is real."
-                </p>
-              </div>
-              <div className="editorial-block">
-                <p className="break-words">
-                  Students know they're capable, but don't know how to get a real shot.
-                </p>
-              </div>
-              <div className="editorial-block">
-                <p className="break-words">
-                  Funds want signal — early looks at talent and portfolio companies.
-                </p>
-              </div>
-            </div>
-            
-            {/* Thesis - new aesthetic, not a box */}
-            <div className="space-y-2">
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-[1px] bg-wvg-teal/50" />
-                <span className="font-mono text-[10px] uppercase tracking-widest text-wvg-teal">Thesis</span>
-              </div>
-              <p className="font-grotesk text-xl lg:text-2xl text-white/90 leading-relaxed pl-11">
-                If you curate the room well enough, the right things happen.
-              </p>
-            </div>
+            <ul className="space-y-3 font-mono text-base lg:text-lg text-white/70 leading-relaxed pt-2">
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-wvg-teal mt-2 shrink-0" />
+                <span className="break-words">Founders stall between "this could be something" and "this is real."</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-wvg-teal mt-2 shrink-0" />
+                <span className="break-words">Students know they're capable, but don't know how to get a real shot.</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-wvg-teal mt-2 shrink-0" />
+                <span className="break-words">Funds want signal — early looks at talent and portfolio companies.</span>
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -105,19 +89,19 @@ export default function Story() {
             </p>
 
             <div className="py-8">
-              <p className="font-grotesk text-xl text-white/90 mb-4">The real wins look quieter:</p>
-              <ul className="space-y-3">
+              <p className="font-mono text-base lg:text-lg text-white/90 mb-4">The real wins look quieter:</p>
+              <ul className="space-y-3 font-mono text-base lg:text-lg text-white/70 leading-relaxed">
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-wvg-teal mt-2 shrink-0" />
-                  <span>a founder finding their first real hire</span>
+                  <span>Founder finding their first real hire</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-wvg-teal mt-2 shrink-0" />
-                  <span>a student getting pulled into a startup because someone trusted them</span>
+                  <span>Student getting pulled into a startup because someone trusted them</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-1.5 h-1.5 rounded-full bg-wvg-teal mt-2 shrink-0" />
-                  <span>a fund meeting a company months before a round opens</span>
+                  <span>Fund meeting a company months before a round opens</span>
                 </li>
               </ul>
             </div>

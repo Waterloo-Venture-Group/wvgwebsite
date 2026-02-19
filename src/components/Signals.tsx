@@ -71,9 +71,7 @@ export default function Signals() {
 
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Section header */}
-        <div className="flex items-center gap-4 mb-12">
-          <span className="font-mono text-xs uppercase tracking-[0.2em] text-white/50">03</span>
-          <div className="w-12 h-[1px] bg-white/20" />
+        <div className="border-l-2 border-wvg-teal/50 pl-6 mb-12">
           <h2 className="font-editorial text-4xl lg:text-5xl">Signals</h2>
         </div>
 
