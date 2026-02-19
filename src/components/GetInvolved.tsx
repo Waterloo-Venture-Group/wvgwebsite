@@ -20,7 +20,7 @@ export default function GetInvolved() {
               <div className="absolute inset-0 bg-gradient-to-bl from-wvg-teal/20 via-transparent to-wvg-blue/10 z-10" />
               
               <Image
-                src="/photos/IMG_0580 (1).jpeg"
+                src="/photos/student_community.JPG"
                 alt="WVG student community"
                 fill
                 className="object-cover"
