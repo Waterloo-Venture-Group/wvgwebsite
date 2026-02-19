@@ -86,29 +86,16 @@ export default function Contact() {
               Let's build something worth following up on.
             </p>
 
-            {/* Email + CTA */}
-            <div className="flex flex-wrap items-stretch gap-4 mb-12">
-              <div className="white-frame p-6 inline-block">
-                <p className="font-mono text-[10px] uppercase tracking-widest text-white/60 mb-2">
-                  Email
-                </p>
-                <a
-                  href="mailto:waterloovg@gmail.com"
-                  className="font-mono text-sm hover:text-wvg-teal transition-colors"
-                >
-                  waterloovg@gmail.com
-                </a>
-              </div>
+            {/* Email */}
+            <div className="white-frame p-6 inline-block mb-12">
+              <p className="font-mono text-[10px] uppercase tracking-widest text-white/60 mb-2">
+                Email
+              </p>
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfsQ4btJn6K_52b_W4m1xX5_D4s3eIPjZuxV6QuNRi7cUD4QA/viewform"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 font-grotesk font-semibold text-sm uppercase tracking-wider bg-wvg-green text-black border border-wvg-green hover:bg-wvg-teal hover:border-wvg-teal transition-colors whitespace-nowrap shrink-0"
+                href="mailto:waterloovg@gmail.com"
+                className="font-mono text-sm hover:text-wvg-teal transition-colors"
               >
-                <span>S26 Executive Team Applications OPEN</span>
-                <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
+                waterloovg@gmail.com
               </a>
             </div>
 

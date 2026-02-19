@@ -27,14 +27,6 @@ export default function Hero() {
         </div>
 
         <div className="relative z-10">
-          {/* Label */}
-          <div className="flex items-center gap-3 mb-6 mt-6">
-            <div className="w-8 h-[1px] bg-wvg-teal" />
-            <span className="font-mono text-xs uppercase tracking-[0.2em] text-wvg-teal">
-              Student entrepreneurship community
-            </span>
-          </div>
-
           {/* Title - Full width spanning across image */}
           <div className="mb-8 lg:mb-12">
             <h1 className="font-editorial text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-medium relative">
@@ -53,8 +45,7 @@ export default function Hero() {
             <div className="flex flex-col gap-6 lg:gap-8">
               {/* Tagline */}
               <p className="font-grotesk text-xl lg:text-2xl text-white/80 leading-tight">
-                Your early-stage edge —<br />
-                and your way into the room.
+                Your early-stage edge and your way into the room.
               </p>
 
             {/* Body copy */}
@@ -126,11 +117,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator - positioned to avoid location tag */}
-      <div className="absolute bottom-8 left-1/4 -translate-x-1/2 flex flex-col items-center gap-2">
-        <span className="font-mono text-[10px] uppercase tracking-widest text-white/50">Scroll</span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-white/30 to-transparent" />
-      </div>
     </section>
   );
 }

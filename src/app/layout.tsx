@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Waterloo Venture Group",
-    description: "Your early-stage edge — and your way into the room.",
+    description: "Your early-stage edge and your way into the room.",
     images: ["https://www.waterloovg.com/photos/WVG-Logo-Dark-PFP.png"],
   },
 };
