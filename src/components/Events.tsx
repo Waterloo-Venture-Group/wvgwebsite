@@ -12,6 +12,15 @@ const events = [
     url: "https://luma.com/0jc5qnb4",
   },
   {
+    src: "/photos/events/northside_event.JPG",
+    title: "Hiring Social ft. YC-Backed Founders by Northside Ventures",
+    titleHighlight: "YC-Backed",
+    date: "Winter 2026",
+    location: "Waterloo, ON",
+    category: "upcoming" as const,
+    url: "https://luma.com/psehtf33",
+  },
+  {
     src: "/photos/events/alisonkaizer.jpeg",
     title: "Fireside Chat with Alison Kaizer from Golden Ventures",
     date: "Winter 2026",
@@ -135,15 +144,27 @@ export default function Events() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent z-10" />
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
-                    <h3 className="font-editorial text-2xl mb-2">{event.title}</h3>
-                    <div className="flex items-center gap-4 font-mono text-[10px] uppercase tracking-wider text-white/70 mb-4">
+                    <h3 className="font-editorial text-2xl mb-2 text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.8)]">
+                      {event.titleHighlight ? (
+                        <>
+                          {event.title.split(event.titleHighlight)[0]}
+                          <span className="border-b-2 border-orange-400 pb-0.5 text-orange-400 [text-shadow:0_1px_2px_rgba(0,0,0,0.9)]">
+                            {event.titleHighlight}
+                          </span>
+                          {event.title.split(event.titleHighlight)[1]}
+                        </>
+                      ) : (
+                        event.title
+                      )}
+                    </h3>
+                    <div className="flex items-center gap-4 font-mono text-[10px] uppercase tracking-wider text-white/90 mb-4 [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
                       <span>{event.date}</span>
                       <span className="w-1 h-1 rounded-full bg-white/30" />
                       <span>{event.location}</span>
                     </div>
-                    <span className="font-mono text-xs uppercase tracking-wider text-wvg-teal group-hover:underline">
+                    <span className="font-mono text-xs uppercase tracking-wider text-wvg-teal group-hover:underline [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
                       Register →
                     </span>
                   </div>
