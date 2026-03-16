@@ -1,4 +1,8 @@
 import Image from "next/image";
+import dynamic from "next/dynamic";
+import type { MasonryItem } from "./Masonry";
+
+const Masonry = dynamic(() => import("./Masonry"), { ssr: false });
 
 const LUMA_URL = "https://lu.ma/user/wvg";
 
@@ -19,6 +23,22 @@ const events = [
     location: "Waterloo, ON",
     category: "upcoming" as const,
     url: "https://luma.com/psehtf33",
+  },
+  {
+    src: "/photos/events/symposium_party.png",
+    title: "Symposium Kickoff Party with Polarity and Project Atlas",
+    date: "Winter 2026",
+    location: "Waterloo, ON",
+    category: "upcoming" as const,
+    url: "https://luma.com/k0xt9ctb",
+  },
+  {
+    src: "/photos/events/upfront.png",
+    title: "Upfront Ventures x Waterloo Builders Night (Pre‑Socratica Showcase)",
+    date: "Winter 2026",
+    location: "Waterloo, ON",
+    category: "upcoming" as const,
+    url: "https://luma.com/heq67l07?tk=LTelfr",
   },
   {
     src: "/photos/events/alisonkaizer.jpeg",
@@ -95,6 +115,19 @@ const events = [
 
 const upcomingEvents = events.filter((e) => e.category === "upcoming");
 const pastEvents = events.filter((e) => e.category === "past");
+
+// Varied heights for masonry layout (creates condensed, flowing grid)
+// Values are halved in layout, so 400–600 yields ~200–300px rendered height
+const masonryHeights = [500, 420, 580, 460, 540, 400, 480, 520, 440, 560];
+const pastEventsMasonryItems: MasonryItem[] = pastEvents.map((event, i) => ({
+  id: `past-${i}`,
+  img: event.src,
+  url: event.url,
+  height: masonryHeights[i % masonryHeights.length],
+  title: event.title,
+  date: event.date,
+  location: event.location,
+}));
 
 export default function Events() {
   return (
@@ -174,48 +207,20 @@ export default function Events() {
           </div>
         </div>
 
-        {/* Past events */}
+        {/* Past events - Masonry layout for condensed, smooth display */}
         <div>
           <p className="font-mono text-[10px] uppercase tracking-widest text-white/50 mb-6">Past events</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {pastEvents.map((event, index) => {
-              const card = (
-                <div className="relative aspect-[4/3] white-frame overflow-hidden card-hover">
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none gradient-border" />
-                  <Image
-                    src={event.src}
-                    alt={event.title}
-                    fill
-                    className="object-cover"
-                    style={{ filter: 'grayscale(100%) contrast(1.1)' }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
-                    <h3 className="font-editorial text-2xl mb-2">{event.title}</h3>
-                    <div className="flex items-center gap-4 font-mono text-[10px] uppercase tracking-wider text-white/70 mb-4">
-                      <span>{event.date}</span>
-                      <span className="w-1 h-1 rounded-full bg-white/30" />
-                      <span>{event.location}</span>
-                    </div>
-                    {event.url && (
-                      <span className="font-mono text-xs uppercase tracking-wider text-wvg-teal group-hover:underline">
-                        View post →
-                      </span>
-                    )}
-                  </div>
-                </div>
-              );
-              return event.url ? (
-                <a key={index} href={event.url} target="_blank" rel="noopener noreferrer" className="group block">
-                  {card}
-                </a>
-              ) : (
-                <div key={index} className="group">
-                  {card}
-                </div>
-              );
-            })}
-          </div>
+          <Masonry
+            items={pastEventsMasonryItems}
+            ease="power3.out"
+            duration={0.6}
+            stagger={0.05}
+            animateFrom="bottom"
+            scaleOnHover={false}
+            blurToFocus
+            colorShiftOnHover={false}
+            grayscale
+          />
         </div>
 
         {/* Luma CTA - keep the "follow for updates" prompt */}

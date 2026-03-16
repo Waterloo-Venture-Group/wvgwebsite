@@ -34,7 +34,7 @@ export default function GetInvolved() {
 
             {/* Floating stat */}
             <div className="absolute -bottom-6 -right-6 bg-black p-6 white-frame">
-              <span className="font-editorial text-4xl text-wvg-teal">23+</span>
+              <span className="font-editorial text-4xl text-wvg-teal">30+</span>
               <p className="font-mono text-[10px] uppercase tracking-wider text-white/60 mt-1">
                 Students matched
               </p>
@@ -85,7 +85,7 @@ export default function GetInvolved() {
             {/* CTA */}
             <div className="mt-10">
               <a href="#contact" className="btn-primary">
-                <span>Join the 23+ students matched with VCs + startups</span>
+                <span>Join the 30+ students matched with VCs + startups</span>
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

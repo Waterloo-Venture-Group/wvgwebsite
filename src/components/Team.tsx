@@ -1,4 +1,5 @@
 import Image from "next/image";
+import BounceCards from "./BounceCards";
 
 const leadership = [
   {
@@ -15,117 +16,132 @@ const leadership = [
   },
   {
     name: "Callie Sweet",
-    role: "Director, Communications & Growth",
+    role: "Managing Director",
     linkedin: "https://www.linkedin.com/in/callieesweet/",
     image: "/photos/leadership/calliesweet.jpeg",
   },
   {
     name: "Demir Eren",
-    role: "Director, Venture Strategy",
+    role: "Managing Director",
     linkedin: "https://www.linkedin.com/in/demireren/",
     image: "/photos/leadership/demireren.jpeg",
   },
 ];
 
-const communicationsGrowth = [
+const associates = [
   {
     name: "Daiva Saplys",
-    role: "External Communications",
+    role: "Associate",
     linkedin: "https://www.linkedin.com/in/daivasaplys/",
     image: "/photos/team/Daiva-Headshot.jpg",
   },
   {
     name: "Paige Griffiths",
-    role: "External Communications",
+    role: "Associate",
     linkedin: "https://www.linkedin.com/in/paige-griffiths-b889432a4/",
     image: "/photos/team/Paige-Headshot.jpg",
   },
   {
     name: "Alyanna Fuentes",
-    role: "Growth Marketing",
+    role: "Associate",
     linkedin: "https://www.linkedin.com/in/alyanna-f/",
     image: "/photos/team/Alyanna-Headshot.jpg",
   },
   {
     name: "Rasana Yogarajan",
-    role: "Growth Marketing",
+    role: "Associate",
     linkedin: "https://www.linkedin.com/in/rasanayogarajan/",
     image: "/photos/team/Rasana-Headshot.jpg",
   },
   {
     name: "Rudra Jassal",
-    role: "Ecosystem Partnerships",
+    role: "Associate",
     linkedin: "https://www.linkedin.com/in/rudrajassal/",
     image: "/photos/team/Headshot-Rudra.jpg",
   },
   {
     name: "Hur Abbas Merchant",
-    role: "Ecosystem Partnerships",
+    role: "Associate",
     linkedin: "https://www.linkedin.com/in/hurabbas-merchant/",
     image: "/photos/team/Headshot-Hur.jpg",
   },
   {
     name: "Yash Panchal",
-    role: "Ecosystem Partnerships",
+    role: "Associate",
     linkedin: "https://www.linkedin.com/in/yash-panchal-80a422333/",
     image: "/photos/team/Headshot-Yash.jpg",
   },
   {
     name: "Ammar Adam",
-    role: "Ecosystem Partnerships",
+    role: "Associate",
     linkedin: "https://www.linkedin.com/in/ammar-adam/",
     image: "/photos/team/Ammar-Headshot-New.jpg",
   },
-];
-
-const ventureStrategy = [
   {
     name: "Michael Zhang",
-    role: "Venture Strategy",
+    role: "Associate",
     linkedin: "https://www.linkedin.com/in/michael-zhang-921ab0274/",
     image: "/photos/team/Michael-Headshot.jpg",
   },
   {
     name: "Srinikesh Singarapu",
-    role: "Venture Strategy",
+    role: "Associate",
     linkedin: "https://www.linkedin.com/in/srinikesh-singarapu/",
     image: "/photos/team/Srini-Headshot.jpg",
   },
   {
     name: "Ilyas Mohamed",
-    role: "Venture Strategy",
+    role: "Associate",
     linkedin: "https://www.linkedin.com/in/ilyasemohamed/",
     image: "/photos/team/Ilyas-Headshot.jpg",
   },
   {
     name: "Nathan Bridgemohan",
-    role: "Venture Strategy",
+    role: "Associate",
     linkedin: "https://www.linkedin.com/in/nathan-bridgemohan/",
     image: "/photos/team/Nathan-Headshot.jpg",
   },
   {
-    name: "Felix Yan",
-    role: "Venture Strategy",
-    linkedin: "https://www.linkedin.com/in/felixyan-zq/",
-    image: "/photos/team/Felix-Headshot.jpg",
-  },
-  {
-    name: "Yasmin Lee",
-    role: "Venture Strategy",
-    linkedin: "https://www.linkedin.com/in/yasmin--lee/",
-    image: "/photos/team/Yasmin-Headshot.jpg",
-  },
-  {
     name: "Jester Yang",
-    role: "Venture Strategy",
+    role: "Associate",
     linkedin: "https://www.linkedin.com/in/jester-yang/",
     image: "/photos/team/Headshot-Jester.png",
   },
   {
     name: "Ishir Lakhani",
-    role: "Venture Strategy",
+    role: "Associate",
     linkedin: "https://www.linkedin.com/in/ishirl/",
     image: "/photos/team/Ishir-Headshot.jpg",
+  },
+  {
+    name: "Jia Naidu",
+    role: "Associate",
+    linkedin: "https://www.linkedin.com/in/jia-naidu-598b18240/",
+    image: "/photos/team/Jia-Headshot.jpg",
+  },
+  {
+    name: "Dev Chandarana",
+    role: "Associate",
+    linkedin: "https://www.linkedin.com/in/dev-chandarana-x/",
+    image: "/photos/team/Dev-Headshot.jpg",
+  },
+  {
+    name: "Spencer Spiegelman",
+    role: "Associate",
+    linkedin: "https://www.linkedin.com/in/spencer-m-spiegelman/",
+    image: "/photos/team/Spencer-Headshot.jpg",
+  },
+  {
+    name: "Mihai Posea",
+    role: "Associate",
+    linkedin: "https://www.linkedin.com/in/mihaiposea/",
+    image: "/photos/team/Mihai-Headshot.jpg",
+  },
+  {
+    name: "Ellen He",
+    role: "Associate",
+    linkedin: "https://www.linkedin.com/in/he-ellen/",
+    image: "/photos/team/Ellen-Headshot.jpeg",
   },
 ];
 
@@ -155,159 +171,70 @@ export default function Team() {
           <h2 className="font-editorial text-5xl lg:text-6xl relative z-10">Leadership</h2>
         </div>
 
-        {/* Team grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mb-20">
+        {/* Leadership - matching card style, no overlap */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
           {leadership.map((member, index) => (
-            <div key={index} className="group relative">
-              {/* Purple and blue fading glow behind cards */}
-              <div className="absolute inset-0 -z-10 opacity-40">
-                <div 
-                  className="absolute inset-0 rounded-full blur-3xl"
-                  style={{
-                    background: `radial-gradient(circle, 
-                      rgba(227, 133, 236, 0.3) 0%,
-                      rgba(0, 74, 173, 0.2) 50%,
-                      transparent 100%)`,
-                    animation: 'auraGlow 4s ease-in-out infinite',
-                  }}
+            <a
+              key={index}
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <div className="relative aspect-square overflow-hidden rounded-xl border border-white/20 shadow-[0_4px_20px_rgba(0,0,0,0.3)] transition-all duration-300 group-hover:border-wvg-teal/50 group-hover:shadow-[0_8px_30px_rgba(0,0,0,0.4)]">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover"
                 />
-              </div>
-              
-              <div className="white-frame p-6 lg:p-8 h-full transition-all duration-300 group-hover:border-wvg-teal/50 relative z-10">
-                {/* Image with moving aura glow */}
-                <div className="relative aspect-square mb-6 overflow-hidden white-frame">
-                  {/* Moving aura glow */}
-                  <div className="absolute inset-0 -z-10 opacity-30">
-                    <div 
-                      className="absolute inset-0 rounded-full blur-2xl animate-pulse-aura"
-                      style={{
-                        background: `radial-gradient(circle, 
-                          rgba(18, 179, 120, 0.4) 0%,
-                          rgba(17, 193, 188, 0.3) 25%,
-                          rgba(0, 74, 173, 0.2) 50%,
-                          rgba(227, 133, 236, 0.3) 75%,
-                          transparent 100%)`,
-                        animation: 'auraGlow 4s ease-in-out infinite',
-                      }}
-                    />
-                  </div>
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover relative z-10"
-                    style={{ transform: 'scale(1.1)' }}
-                  />
-                </div>
-
-                {/* Info */}
-                <div>
-                  <h3 className="font-grotesk text-lg lg:text-xl font-semibold mb-2">
+                <div
+                  className="absolute inset-0 flex flex-col justify-end p-5"
+                  style={{
+                    background: "linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 50%)",
+                  }}
+                >
+                  <h3 className="font-grotesk text-lg font-semibold text-white mb-1">
                     {member.name}
                   </h3>
-                  <p className="font-mono text-xs text-white/60 mb-4 leading-relaxed">
+                  <p className="font-mono text-[10px] text-white/70 mb-3 leading-relaxed">
                     {member.role}
                   </p>
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-wider text-wvg-teal hover:text-white transition-colors"
-                  >
-                    <span>LinkedIn</span>
+                  <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-wider text-wvg-teal group-hover:text-white transition-colors">
+                    LinkedIn
                     <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
-                  </a>
+                  </span>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
-        {/* Communications & Growth Team */}
-        <div className="mb-20">
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-8 h-[1px] bg-wvg-green/50" />
-            <h3 className="font-editorial text-3xl lg:text-4xl">Communications & Growth</h3>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 lg:gap-6">
-            {communicationsGrowth.map((member, index) => (
-              <div key={index} className="group">
-                <div className="white-frame p-4 lg:p-5 h-full transition-all duration-300 group-hover:border-wvg-green/50">
-                  <div className="relative aspect-square mb-4 overflow-hidden white-frame">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="font-grotesk text-sm lg:text-base font-semibold mb-1">
-                      {member.name}
-                    </h4>
-                    <p className="font-mono text-[10px] text-white/60 mb-3 leading-relaxed">
-                      {member.role}
-                    </p>
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-wider text-wvg-green hover:text-white transition-colors"
-                    >
-                      <span>LinkedIn</span>
-                      <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Venture Strategy Team */}
+        {/* Associates - BounceCards layout */}
         <div>
           <div className="flex items-center gap-4 mb-8">
-            <div className="w-8 h-[1px] bg-wvg-blue/50" />
-            <h3 className="font-editorial text-3xl lg:text-4xl">Venture Strategy</h3>
+            <div className="w-8 h-[1px] bg-wvg-teal/50" />
+            <h3 className="font-editorial text-3xl lg:text-4xl">Associates</h3>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 lg:gap-6">
-            {ventureStrategy.map((member, index) => (
-              <div key={index} className="group">
-                <div className="white-frame p-4 lg:p-5 h-full transition-all duration-300 group-hover:border-wvg-blue/50">
-                  <div className="relative aspect-square mb-4 overflow-hidden white-frame">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="font-grotesk text-sm lg:text-base font-semibold mb-1">
-                      {member.name}
-                    </h4>
-                    <p className="font-mono text-[10px] text-white/60 mb-3 leading-relaxed">
-                      {member.role}
-                    </p>
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-wider text-wvg-blue hover:text-white transition-colors"
-                    >
-                      <span>LinkedIn</span>
-                      <svg className="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="overflow-x-auto overflow-y-visible pb-4 sm:overflow-visible">
+            <div className="flex justify-center min-w-[1100px] sm:min-w-0">
+              <BounceCards
+                items={associates.map(({ name, image, linkedin }) => ({
+                  name,
+                  image,
+                  linkedin,
+                }))}
+                cardSize={220}
+                overlapPx={95}
+                rows={2}
+                animationDelay={0.3}
+                animationStagger={0.04}
+                easeType="elastic.out(1, 0.5)"
+                enableHover
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -68,7 +68,7 @@ export default function Story() {
             </p>
             <p className="text-white/90">
               We've helped startups reach YC, partnered with top VCs across North America, 
-              and helped unlock <span className="text-wvg-green font-semibold">$2.8M+</span> in funding — but that's just the visible part.
+              and helped unlock <span className="text-wvg-green font-semibold">$4M+</span> in funding — but that's just the visible part.
             </p>
 
             <div className="py-8">
