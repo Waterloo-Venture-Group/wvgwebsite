@@ -1,4 +1,4 @@
-import Image from "next/image";
+import MagicBentoPartners from "./MagicBento";
 
 const supporters = [
   {
@@ -36,6 +36,27 @@ const supporters = [
     description: "Pitch development and raise support",
     logo: "/photos/supporters/polarity.png",
     url: "https://www.polarity.cc/",
+  },
+  {
+    name: "Northside Ventures",
+    description: "YC Hiring Social pre-Socratica",
+    logo: "/photos/supporters/northside_logo.png",
+    url: "https://www.northside.ventures/",
+    whiteLogo: true,
+  },
+  {
+    name: "Project Atlas",
+    description: "Socratica Symposium Kickoff Party",
+    logo: "/photos/supporters/atlas_logo.png",
+    url: "https://www.atlascap.io/",
+    whiteLogo: true,
+  },
+  {
+    name: "Upfront Ventures",
+    description: "Waterloo Builders Night pre-Socratica",
+    logo: "/photos/supporters/upfront_logo.png",
+    url: "https://upfront.com/",
+    whiteLogo: true,
   },
 ];
 
@@ -100,84 +121,24 @@ export default function Signals() {
 
         {/* Partners subtitle and grid */}
         <div>
-          <p className="font-mono text-xs uppercase tracking-widest text-white/60 mb-6">
+          <p className="font-mono text-xs uppercase tracking-widest text-white/60 mb-4">
             Partners we've supported
           </p>
 
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-            {supporters.map((supporter, index) => (
-              <a
-                key={index}
-                href={supporter.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative block"
-              >
-                {/* Card container */}
-                <div className="relative p-8 lg:p-10 white-frame transition-all duration-500 group-hover:border-wvg-blue/50 group-hover:border-wvg-purple/50 cursor-pointer">
-                  {/* Gradient border on hover */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-sm">
-                    <div 
-                      className="absolute inset-0 rounded-sm"
-                      style={{
-                        background: 'linear-gradient(135deg, rgba(0, 74, 173, 0.4), rgba(227, 133, 236, 0.4))',
-                        padding: '1px',
-                        WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                        mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-                        WebkitMaskComposite: 'xor',
-                        maskComposite: 'exclude',
-                      }}
-                    />
-                  </div>
-
-                  {/* Liquid glass overlay on hover */}
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none overflow-hidden rounded-sm">
-                    {/* Glass reflection effect */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent" />
-                    <div 
-                      className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-white/20"
-                      style={{
-                        animation: 'shimmer 3s ease-in-out infinite',
-                      }}
-                    />
-                    {/* Blue-purple glow */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-wvg-blue/20 via-wvg-purple/20 to-transparent blur-xl" />
-                  </div>
-
-                  {/* Logo */}
-                  <div className="relative z-10 mb-6 h-16 flex items-center justify-center">
-                    <div className="relative w-full h-full transition-all duration-500 group-hover:scale-105">
-                      <Image
-                        src={supporter.logo}
-                        alt={supporter.name}
-                        fill
-                        className="object-contain"
-                        style={{
-                          filter: 'brightness(0) invert(1)',
-                          opacity: 0.9,
-                          transition: 'all 0.5s ease',
-                        }}
-                      />
-                    </div>
-                  </div>
-
-                  {/* Info */}
-                  <div className="relative z-10">
-                    <h3 className="font-grotesk text-lg font-semibold mb-2 group-hover:text-wvg-blue transition-colors">
-                      {supporter.name}
-                    </h3>
-                    <p className="font-mono text-xs text-white/60 leading-relaxed">
-                      {supporter.description}
-                    </p>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
+          <MagicBentoPartners
+            supporters={supporters}
+            enableStars={true}
+            enableSpotlight={true}
+            enableBorderGlow={true}
+            clickEffect={true}
+            spotlightRadius={400}
+            particleCount={12}
+            glowColor="227, 133, 236"
+          />
         </div>
 
         {/* Accent line */}
-        <div className="mt-12 h-[1px] bg-gradient-to-r from-wvg-green via-wvg-teal to-wvg-purple opacity-50" />
+        <div className="mt-8 h-[1px] bg-gradient-to-r from-wvg-green via-wvg-teal to-wvg-purple opacity-50" />
       </div>
     </section>
   );

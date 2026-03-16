@@ -37,6 +37,27 @@ const supporters = [
     logo: "/photos/supporters/polarity.png",
     url: "https://www.polarity.cc/",
   },
+  {
+    name: "Northside Ventures",
+    description: "YC Hiring Social pre-Socratica",
+    logo: "/photos/supporters/northside_logo.png",
+    url: "https://www.northside.ventures/",
+    whiteLogo: true,
+  },
+  {
+    name: "Project Atlas",
+    description: "Socratica Symposium Kickoff Party",
+    logo: "/photos/supporters/atlas_logo.png",
+    url: "https://www.atlascap.io/",
+    whiteLogo: true,
+  },
+  {
+    name: "Upfront Ventures",
+    description: "Waterloo Builders Night pre-Socratica",
+    logo: "/photos/supporters/upfront_logo.png",
+    url: "https://upfront.com/",
+    whiteLogo: true,
+  },
 ];
 
 export default function Supporters() {
@@ -106,7 +127,7 @@ export default function Supporters() {
                       fill
                       className="object-contain"
                       style={{
-                        filter: 'brightness(0) invert(1)',
+                        filter: supporter.whiteLogo ? 'none' : 'brightness(0) invert(1)',
                         opacity: 0.9,
                         transition: 'all 0.5s ease',
                       }}
