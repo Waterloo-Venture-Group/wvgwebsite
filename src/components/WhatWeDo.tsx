@@ -4,12 +4,17 @@ export default function WhatWeDo() {
       {/* Section divider */}
       <div className="section-divider mb-16" />
 
-      {/* Background gradient and subtle grid */}
+      {/* Background gradient - smooth multi-stop gradient, no hard cutoffs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-wvg-green/5 via-wvg-teal/5 via-wvg-blue/5 to-wvg-purple/5" />
-        <div className="absolute top-0 right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-bl from-wvg-blue/10 to-transparent blur-[120px]" />
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(135deg, rgba(18, 179, 120, 0.08) 0%, rgba(17, 193, 188, 0.06) 30%, rgba(0, 74, 173, 0.05) 60%, rgba(227, 133, 236, 0.04) 100%)",
+          }}
+        />
+        <div className="absolute top-0 right-1/4 w-[700px] h-[700px] rounded-full bg-gradient-to-bl from-wvg-blue/8 to-transparent blur-[160px]" />
         {/* Subtle notebook grid */}
-        <div className="absolute inset-0 opacity-[0.02]" style={{
+        <div className="absolute inset-0 opacity-[0.015]" style={{
           backgroundImage: `
             linear-gradient(to right, white 1px, transparent 1px),
             linear-gradient(to bottom, white 1px, transparent 1px)

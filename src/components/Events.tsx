@@ -8,8 +8,8 @@ const events = [
     title: "Opennote (YC S25) Group Build Sprint",
     date: "Winter 2026",
     location: "Waterloo, ON",
-    category: "upcoming" as const,
-    url: "https://luma.com/0jc5qnb4",
+    category: "past" as const,
+    url: "https://www.linkedin.com/posts/waterlooventuregroup_students-dont-come-to-events-like-this-just-activity-7434682198185639938-32-H?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
   },
   {
     src: "/photos/events/northside_event.JPG",

@@ -41,10 +41,10 @@ const supporters = [
 
 export default function Signals() {
   const metrics = [
-    { value: "$2.8M+", label: "In funding unlocked" },
+    { value: "$4M+", label: "Funding unlocked" },
     { value: "YC", label: "Cohort acceptance" },
     { value: "1300+", label: "Active members" },
-    { value: "23+", label: "Students hired by startups" },
+    { value: "30+", label: "Students hired by startups" },
     { value: "2025", label: "Celebrating one year" },
   ];
 
@@ -53,12 +53,18 @@ export default function Signals() {
       {/* Section divider */}
       <div className="section-divider mb-12" />
 
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-wvg-blue/5 to-black" />
+      {/* Background - smooth blend from WhatWeDo (green/teal) into blue/purple, no hard cutoff */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(135deg, rgba(18, 179, 120, 0.07) 0%, rgba(17, 193, 188, 0.06) 20%, rgba(0, 74, 173, 0.07) 45%, rgba(0, 74, 173, 0.05) 70%, rgba(227, 133, 236, 0.04) 90%, rgba(18, 179, 120, 0.02) 100%)",
+        }}
+      />
       
-      {/* Background gradient */}
+      {/* Background gradient blobs - larger blur for softer edges */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-wvg-blue/5 via-wvg-purple/5 to-transparent blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-wvg-blue/8 via-wvg-purple/5 to-transparent blur-[180px]" />
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-wvg-green/5 to-transparent blur-[150px]" />
       </div>
       
       {/* Grid overlay */}

@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import GradientText from "./GradientText";
 
 export default function Hero() {
   return (
@@ -7,17 +10,6 @@ export default function Hero() {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 right-0 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-wvg-blue/20 via-wvg-purple/10 to-transparent blur-[120px]" />
         <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-wvg-green/10 via-wvg-teal/5 to-transparent blur-[100px]" />
-      </div>
-
-      {/* Grid lines overlay */}
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div className="h-full w-full" style={{
-          backgroundImage: `
-            linear-gradient(to right, white 1px, transparent 1px),
-            linear-gradient(to bottom, white 1px, transparent 1px)
-          `,
-          backgroundSize: '80px 80px'
-        }} />
       </div>
 
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12 w-full">
@@ -34,7 +26,14 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-wvg-green/10 via-wvg-teal/10 via-wvg-blue/10 to-wvg-purple/10 blur-2xl" />
               <div className="relative flex flex-wrap items-baseline gap-x-4 lg:gap-x-6 gap-y-2">
                 <span className="block">WATERLOO</span>
-                <span className="block gradient-text">VENTURE</span>
+                <GradientText
+                  colors={["#12B378", "#11C1BC", "#004AAD", "#E385EC"]}
+                  animationSpeed={8}
+                  showBorder={false}
+                  className="block"
+                >
+                  VENTURE
+                </GradientText>
                 <span className="block">GROUP</span>
               </div>
             </h1>

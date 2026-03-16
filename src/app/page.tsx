@@ -11,10 +11,26 @@ import Team from "@/components/Team";
 import Socials from "@/components/Socials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ShapeGrid from "@/components/ShapeGrid";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white overflow-x-hidden">
+    <main className="relative min-h-screen bg-black text-white overflow-x-hidden">
+      {/* ShapeGrid background - WVG styled */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 opacity-40">
+          <ShapeGrid
+            speed={0.5}
+            squareSize={40}
+            direction="diagonal"
+            borderColor="rgba(255, 255, 255, 0.06)"
+            hoverFillColor="rgba(17, 193, 188, 0.12)"
+            shape="square"
+            hoverTrailAmount={0}
+          />
+        </div>
+      </div>
+      <div className="relative z-10">
       <Nav />
       <Hero />
       <Story />
@@ -27,6 +43,7 @@ export default function Home() {
       <Socials />
       <Contact />
       <Footer />
+      </div>
     </main>
   );
 }
