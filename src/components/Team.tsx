@@ -30,27 +30,13 @@ const leadership = [
 export default function Team() {
   return (
     <section id="team" className="py-16 lg:py-20 relative overflow-hidden">
-      {/* Section divider */}
-      <div className="section-divider mb-16" />
-
-      {/* Background gradient */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-wvg-purple/10 via-wvg-blue/5 to-transparent blur-[150px]" />
-      </div>
-
-      {/* Subtle grid paper background */}
-      <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: `
-          linear-gradient(to right, white 1px, transparent 1px),
-          linear-gradient(to bottom, white 1px, transparent 1px)
-        `,
-        backgroundSize: '30px 30px'
-      }} />
-
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Section header */}
         <div className="border-l-2 border-wvg-teal/50 pl-6 mb-12 relative">
-          <h2 className="font-editorial text-5xl lg:text-6xl relative z-10">Leadership</h2>
+          <h2 className="font-editorial text-5xl lg:text-6xl relative z-10">Team</h2>
+          <p className="font-mono text-xs uppercase tracking-widest text-white/50 mt-3 relative z-10">
+            Leadership
+          </p>
         </div>
 
         {/* Leadership - matching card style, no overlap */}
@@ -69,6 +55,8 @@ export default function Team() {
                   alt={member.name}
                   fill
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 320px"
+                  quality={80}
                 />
                 <div
                   className="absolute inset-0 flex flex-col justify-end p-5"

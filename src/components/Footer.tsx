@@ -1,11 +1,9 @@
 import Image from "next/image";
+import { navLinks } from "@/lib/nav";
 
 export default function Footer() {
   return (
     <footer className="py-20 relative">
-      {/* Top border with gradient */}
-      <div className="h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent mb-20" />
-
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-12 gap-12">
           {/* Left: Brand statement */}
@@ -36,12 +34,7 @@ export default function Footer() {
                   Navigate
                 </p>
                 <ul className="space-y-3">
-                  {[
-                    { href: "#what-we-do", label: "What we do" },
-                    { href: "#events", label: "Events" },
-                    { href: "#team", label: "Team" },
-                    { href: "#contact", label: "Contact" },
-                  ].map((link) => (
+                  {navLinks.map((link) => (
                     <li key={link.href}>
                   <a
                     href={link.href}

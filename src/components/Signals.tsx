@@ -70,35 +70,10 @@ export default function Signals() {
   ];
 
   return (
-    <section className="py-12 lg:py-16 relative overflow-hidden">
-      {/* Section divider */}
-      <div className="section-divider mb-12" />
-
-      {/* Background - smooth blend from WhatWeDo (green/teal) into blue/purple, no hard cutoff */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: "linear-gradient(135deg, rgba(18, 179, 120, 0.07) 0%, rgba(17, 193, 188, 0.06) 20%, rgba(0, 74, 173, 0.07) 45%, rgba(0, 74, 173, 0.05) 70%, rgba(227, 133, 236, 0.04) 90%, rgba(18, 179, 120, 0.02) 100%)",
-        }}
-      />
-      
-      {/* Background gradient blobs - larger blur for softer edges */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-br from-wvg-blue/8 via-wvg-purple/5 to-transparent blur-[180px]" />
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-wvg-green/5 to-transparent blur-[150px]" />
-      </div>
-      
-      {/* Grid overlay */}
-      <div className="absolute inset-0 opacity-[0.02]">
-        <div className="h-full w-full" style={{
-          backgroundImage: `linear-gradient(to right, white 1px, transparent 1px)`,
-          backgroundSize: '120px 100%'
-        }} />
-      </div>
-
+    <section id="signals" className="py-16 lg:py-20 relative overflow-hidden">
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12">
         {/* Section header */}
-        <div className="border-l-2 border-wvg-teal/50 pl-6 mb-12">
+        <div className="border-l-2 border-wvg-teal/50 pl-6 mb-8">
           <h2 className="font-editorial text-4xl lg:text-5xl">Signals</h2>
         </div>
 
@@ -127,9 +102,6 @@ export default function Signals() {
 
           <PartnersCarousel supporters={supporters} />
         </div>
-
-        {/* Accent line */}
-        <div className="mt-8 h-[1px] bg-gradient-to-r from-wvg-green via-wvg-teal to-wvg-purple opacity-50" />
       </div>
     </section>
   );

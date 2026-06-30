@@ -2,24 +2,45 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { navLinks, sectionIds } from "@/lib/nav";
 
-const navLinks = [
-  { href: "#what-we-do", label: "What we do" },
-  { href: "#events", label: "Events" },
-  { href: "#team", label: "Team" },
-  { href: "#contact", label: "Contact" },
-];
+const HERO_SCROLL_THRESHOLD = 120;
 
 export default function Nav() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {
-    const handleScroll = () => {
+    const updateNavState = () => {
       setIsScrolled(window.scrollY > 20);
+
+      if (window.scrollY < HERO_SCROLL_THRESHOLD) {
+        setActiveSection("");
+        return;
+      }
+
+      let currentSection = "";
+      for (const id of sectionIds) {
+        const element = document.getElementById(id);
+        if (!element) continue;
+
+        const { top } = element.getBoundingClientRect();
+        if (top <= HERO_SCROLL_THRESHOLD) {
+          currentSection = id;
+        }
+      }
+
+      setActiveSection(currentSection);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    updateNavState();
+    window.addEventListener("scroll", updateNavState, { passive: true });
+    window.addEventListener("hashchange", updateNavState);
+    return () => {
+      window.removeEventListener("scroll", updateNavState);
+      window.removeEventListener("hashchange", updateNavState);
+    };
   }, []);
 
   return (
@@ -30,7 +51,6 @@ export default function Nav() {
     >
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
             <div className="relative">
               <Image
@@ -45,30 +65,26 @@ export default function Nav() {
             </div>
           </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-10">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="font-mono text-xs uppercase tracking-wider text-white/70 hover:text-white transition-colors duration-200"
-              >
-                {link.label}
-              </a>
-            ))}
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
+            {navLinks.map((link) => {
+              const sectionId = link.href.slice(1);
+              const isActive = activeSection === sectionId;
+
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`font-mono text-xs uppercase tracking-wider transition-colors duration-200 ${
+                    isActive ? "text-white" : "text-white/70 hover:text-white"
+                  }`}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
           </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-4">
-            <a href="#get-involved" className="btn-secondary text-xs">
-              <span>Get involved</span>
-            </a>
-            <a href="#contact" className="btn-primary text-xs">
-              <span>Partner with us</span>
-            </a>
-          </div>
-
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden flex flex-col gap-1.5 p-2"
@@ -92,11 +108,9 @@ export default function Nav() {
           </button>
         </div>
 
-        {/* Divider line */}
         <div className="h-[1px] bg-white/10" />
       </div>
 
-      {/* Mobile Menu */}
       <div
         className={`lg:hidden absolute top-full left-0 right-0 bg-black/98 backdrop-blur-lg border-b border-white/10 transition-all duration-300 ${
           isMobileMenuOpen
@@ -105,32 +119,24 @@ export default function Nav() {
         }`}
       >
         <div className="max-w-[1400px] mx-auto px-6 py-8 flex flex-col gap-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="font-mono text-sm uppercase tracking-wider text-white/70 hover:text-white transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
-          <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
-            <a
-              href="#get-involved"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="btn-secondary text-xs w-full justify-center"
-            >
-              <span>Get involved</span>
-            </a>
-            <a
-              href="#contact"
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="btn-primary text-xs w-full justify-center"
-            >
-              <span>Partner with us</span>
-            </a>
-          </div>
+          {navLinks.map((link) => {
+            const sectionId = link.href.slice(1);
+            const isActive = activeSection === sectionId;
+
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`font-mono text-sm uppercase tracking-wider transition-colors ${
+                  isActive ? "text-white" : "text-white/70 hover:text-white"
+                }`}
+                aria-current={isActive ? "page" : undefined}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </div>
       </div>
     </nav>

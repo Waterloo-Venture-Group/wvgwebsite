@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.waterloovg.com"),
   title: "Waterloo Venture Group | Your Early-Stage Edge",
   description: "WVG is a student-led venture consultancy, talent network, and entrepreneurship community. We build rooms where founders meet investors, students find real startup roles, and funds meet talent early.",
   keywords: ["venture", "startup", "waterloo", "entrepreneurship", "talent", "founders", "investors", "co-op", "consulting"],
@@ -18,20 +19,11 @@ export const metadata: Metadata = {
     locale: "en_CA",
     url: "https://www.waterloovg.com",
     siteName: "Waterloo Venture Group",
-    images: [
-      {
-        url: "https://www.waterloovg.com/photos/WVG-Logo-Dark-PFP.png",
-        width: 1200,
-        height: 1200,
-        alt: "Waterloo Venture Group Logo",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Waterloo Venture Group",
     description: "Your early-stage edge and your way into the room.",
-    images: ["https://www.waterloovg.com/photos/WVG-Logo-Dark-PFP.png"],
   },
 };
 

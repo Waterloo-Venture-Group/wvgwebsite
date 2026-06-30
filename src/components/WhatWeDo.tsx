@@ -1,68 +1,46 @@
 export default function WhatWeDo() {
   return (
     <section id="what-we-do" className="py-16 lg:py-20 relative">
-      {/* Section divider */}
-      <div className="section-divider mb-16" />
-
-      {/* Background gradient - smooth multi-stop gradient, no hard cutoffs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div
-          className="absolute inset-0"
-          style={{
-            background: "linear-gradient(135deg, rgba(18, 179, 120, 0.08) 0%, rgba(17, 193, 188, 0.06) 30%, rgba(0, 74, 173, 0.05) 60%, rgba(227, 133, 236, 0.04) 100%)",
-          }}
-        />
-        <div className="absolute top-0 right-1/4 w-[700px] h-[700px] rounded-full bg-gradient-to-bl from-wvg-blue/8 to-transparent blur-[160px]" />
-        {/* Subtle notebook grid */}
-        <div className="absolute inset-0 opacity-[0.015]" style={{
-          backgroundImage: `
-            linear-gradient(to right, white 1px, transparent 1px),
-            linear-gradient(to bottom, white 1px, transparent 1px)
-          `,
-          backgroundSize: '40px 40px'
-        }} />
-      </div>
-
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12">
-        {/* Section header */}
         <div className="border-l-2 border-wvg-teal/50 pl-6 mb-8">
-          <h2 className="font-editorial text-5xl lg:text-6xl">What we do</h2>
+          <h2 className="font-editorial text-5xl lg:text-6xl">About</h2>
         </div>
 
-        {/* Pillars */}
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-6">
-          {/* Pillar 1: For Founders */}
-          <div className="group relative">
+          <div id="for-founders" className="group relative scroll-mt-28">
             <div className="white-frame p-8 lg:p-10 h-full transition-all duration-300 group-hover:border-wvg-green/50 relative overflow-hidden">
-              {/* Green glow behind title */}
               <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-wvg-green/10 to-transparent blur-2xl opacity-50" />
-              
-              {/* Gradient accent */}
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-wvg-green via-wvg-teal to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
-              {/* Label */}
-              <div className="mb-6 relative z-10">
+
+              <div className="mb-4 relative z-10">
                 <h3 className="font-editorial text-2xl lg:text-3xl font-bold text-wvg-green">
                   For Founders
                 </h3>
-              </div>
-
-              {/* Content */}
-              <div className="font-mono text-sm text-white/70 leading-relaxed space-y-4 mb-8">
-                <p>
-                  We help you find investors, co-founders and early operators – and get 
-                  your story tight enough that when the moment comes, you're ready.
-                </p>
-                <p>
-                  Sometimes that looks like pitch work or GTM clarity. 
-                  Often it's just getting you in front of the right person sooner than 
-                  you would have on your own.
+                <p className="font-mono text-sm text-white/70 mt-4">
+                  Pitch readiness, GTM clarity, and intros when the moment hits.
                 </p>
               </div>
 
-              {/* CTA */}
-              <a href="#build-with-us" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-wvg-green hover:text-white transition-colors group/link">
-                <span>Start building with us</span>
+              <ul className="font-mono text-sm text-white/70 space-y-3 mb-8 relative z-10">
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-wvg-green mt-2 shrink-0" />
+                  <span>Pitch and narrative refinement</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-wvg-green mt-2 shrink-0" />
+                  <span>Go-to-market strategy</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-wvg-green mt-2 shrink-0" />
+                  <span>Intros to co-founders, operators, and investors</span>
+                </li>
+              </ul>
+
+              <a
+                href="#contact-build"
+                className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-wvg-green hover:text-white transition-colors group/link relative z-10"
+              >
+                <span>Build with us</span>
                 <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -70,38 +48,39 @@ export default function WhatWeDo() {
             </div>
           </div>
 
-          {/* Pillar 2: For Students */}
-          <div className="group relative">
+          <div id="for-students" className="group relative scroll-mt-28">
             <div className="white-frame p-8 lg:p-10 h-full transition-all duration-300 group-hover:border-wvg-teal/50 relative overflow-hidden">
-              {/* Teal glow behind title */}
               <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-wvg-teal/10 to-transparent blur-2xl opacity-50" />
-              
-              {/* Gradient accent */}
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-wvg-teal via-wvg-blue to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
-              {/* Label */}
-              <div className="mb-6 relative z-10">
+
+              <div className="mb-4 relative z-10">
                 <h3 className="font-editorial text-2xl lg:text-3xl font-bold text-wvg-teal">
                   For Students
                 </h3>
-              </div>
-
-              {/* Content */}
-              <div className="font-mono text-sm text-white/70 leading-relaxed space-y-4 mb-8">
-                <p>
-                  We'll put you in rooms where people are building, not posturing. We help you 
-                  get real work – co-ops, new-grad roles and early startup experience.
-                </p>
-                <p>
-                  You don't need to be loud.
-                </p>
-                <p>
-                  You need to be useful, curious, and present.
+                <p className="font-mono text-sm text-white/70 mt-4">
+                  Real rooms, real work, no perfect resume required.
                 </p>
               </div>
 
-              {/* CTA */}
-              <a href="#get-involved" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-wvg-teal hover:text-white transition-colors group/link">
+              <ul className="font-mono text-sm text-white/70 space-y-3 mb-8 relative z-10">
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-wvg-teal mt-2 shrink-0" />
+                  <span>Hands-on startup experience</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-wvg-teal mt-2 shrink-0" />
+                  <span>Invites to exclusive VC rooms</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-wvg-teal mt-2 shrink-0" />
+                  <span>Co-op + new-grad roles in early-stage teams</span>
+                </li>
+              </ul>
+
+              <a
+                href="#contact-involved"
+                className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-wvg-teal hover:text-white transition-colors group/link relative z-10"
+              >
                 <span>Get involved</span>
                 <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -110,40 +89,39 @@ export default function WhatWeDo() {
             </div>
           </div>
 
-          {/* Pillar 3: For Funds */}
-          <div className="group relative">
+          <div id="for-partners" className="group relative scroll-mt-28">
             <div className="white-frame p-8 lg:p-10 h-full transition-all duration-300 group-hover:border-wvg-purple/50 relative overflow-hidden">
-              {/* Purple glow behind title */}
               <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-wvg-purple/10 to-transparent blur-2xl opacity-50" />
-              
-              {/* Gradient accent */}
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-wvg-purple via-wvg-blue to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              
-              {/* Label */}
-              <div className="mb-6 relative z-10">
+
+              <div className="mb-4 relative z-10">
                 <h3 className="font-editorial text-2xl lg:text-3xl font-bold text-wvg-purple">
                   For Funds & Partners
                 </h3>
-              </div>
-
-              {/* Content */}
-              <div className="font-mono text-sm text-white/70 leading-relaxed space-y-4 mb-8">
-                <p>
-                  We help you meet high-signal talent and future portfolio companies early.
-                </p>
-                <p>
-                  Everyone else meets them after the polish.
-                </p>
-                <p>
-                  We introduce you when it's still messy, honest, and high-signal.
-                </p>
-                <p className="text-white/80 font-mono">
-                  Let's understand what ROI means for you.
+                <p className="font-mono text-sm text-white/70 mt-4">
+                  High-signal founders and talent before the polish sets in.
                 </p>
               </div>
 
-              {/* CTA */}
-              <a href="#contact" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-wvg-purple hover:text-white transition-colors group/link">
+              <ul className="font-mono text-sm text-white/70 space-y-3 mb-8 relative z-10">
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-wvg-purple mt-2 shrink-0" />
+                  <span>Early intros to founders and operators</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-wvg-purple mt-2 shrink-0" />
+                  <span>Curated rooms with Waterloo builders</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="w-1.5 h-1.5 bg-wvg-purple mt-2 shrink-0" />
+                  <span>Access to student talent before the market</span>
+                </li>
+              </ul>
+
+              <a
+                href="#contact-partner"
+                className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-wvg-purple hover:text-white transition-colors group/link relative z-10"
+              >
                 <span>Partner with us</span>
                 <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />

@@ -3,8 +3,5 @@ export { default as Hero } from "./Hero";
 export { default as WhatWeDo } from "./WhatWeDo";
 export { default as Signals } from "./Signals";
 export { default as Events } from "./Events";
-export { default as BuildWithUs } from "./BuildWithUs";
-export { default as GetInvolved } from "./GetInvolved";
-export { default as EventList } from "./EventList";
 export { default as Contact } from "./Contact";
 export { default as Footer } from "./Footer";

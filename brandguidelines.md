@@ -66,15 +66,16 @@ Create a venture-grade aesthetic that blends editorial design, technical precisi
 ### Primary Serif (Headlines)
 
 #### Font
-- Times New Roman Condensed or equivalent serif
+- Playfair Display (loaded in `src/app/globals.css`)
 
 #### Usage
 - Hero headlines
 - Key statements
+- Section titles via `.font-editorial`
 
 #### Style Rules
 - Large scale
-- Tight tracking
+- Tight tracking (`letter-spacing: -0.02em`)
 - Editorial tone
 
 ---
@@ -82,14 +83,15 @@ Create a venture-grade aesthetic that blends editorial design, technical precisi
 ### Sans-serif (Subheadings)
 
 #### Font
-- CY Grotesk or equivalent grotesk
+- Schibsted Grotesk (loaded in `src/app/globals.css`)
 
 #### Usage
-- Section titles
 - UI labels
+- Button text
+- Supporting headlines via `.font-grotesk`
 
 #### Style Rules
-- Bold
+- Bold where needed
 - Uppercase optional
 
 ---
@@ -97,17 +99,20 @@ Create a venture-grade aesthetic that blends editorial design, technical precisi
 ### Monospace (Body and Metadata)
 
 #### Font
-- Roboto Mono or equivalent monospace
+- JetBrains Mono (loaded in `src/app/globals.css`)
 
 #### Usage
 - Body text
 - Captions
 - Metadata
-- UI microcopy
+- UI microcopy via `.font-mono`
 
 #### Style Rules
 - Small size
 - High readability
+
+#### Implementation note
+- Do not swap these stacks without updating `globals.css` and this document together
 
 ---
 

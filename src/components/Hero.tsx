@@ -6,12 +6,6 @@ import GradientText from "./GradientText";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20">
-      {/* Background gradient effect */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 right-0 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-wvg-blue/20 via-wvg-purple/10 to-transparent blur-[120px]" />
-        <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-tr from-wvg-green/10 via-wvg-teal/5 to-transparent blur-[100px]" />
-      </div>
-
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12 w-full">
         {/* Full-width gradient overlay for title */}
         <div className="absolute inset-0 pointer-events-none">
@@ -57,17 +51,14 @@ export default function Hero() {
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 pt-4">
-              <a href="#build-with-us" className="btn-primary">
-                <span>Build with us</span>
+              <a href="#contact" className="btn-primary">
+                <span>Get in touch</span>
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
-              <a href="#contact" className="btn-secondary">
-                <span>Partner with us</span>
-              </a>
-              <a href="#get-involved" className="btn-secondary">
-                <span>Get involved</span>
+              <a href="#what-we-do" className="btn-secondary">
+                <span>About</span>
               </a>
             </div>
             </div>
@@ -85,7 +76,9 @@ export default function Hero() {
                 alt="WVG Community Event at Communitech"
                 fill
                 className="object-cover"
-                style={{ objectPosition: 'center 40%' }}
+                style={{ objectPosition: "center 40%" }}
+                sizes="(max-width: 1024px) 100vw, 640px"
+                quality={80}
                 priority
               />
 

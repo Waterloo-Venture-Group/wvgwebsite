@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
-
-type Intent = "partner" | "build" | "involved";
+import { useEffect, useState } from "react";
+import { intentFromHash, isContactHash, type Intent } from "@/lib/contact-intent";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,16 +13,37 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const applyIntentFromHash = () => {
+      const hash = window.location.hash;
+      const intent = intentFromHash(hash);
+
+      if (intent) {
+        setFormData((prev) => ({ ...prev, intent }));
+      }
+
+      if (isContactHash(hash)) {
+        document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    applyIntentFromHash();
+    window.addEventListener("hashchange", applyIntentFromHash);
+    return () => window.removeEventListener("hashchange", applyIntentFromHash);
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(null);
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -31,21 +51,22 @@ export default function Contact() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to send message');
+        throw new Error(data.error || "Failed to send message");
       }
 
       setIsSubmitted(true);
-      // Reset form
       setFormData({
         name: "",
         email: "",
         organization: "",
-        intent: "partner" as Intent,
+        intent: "partner",
         message: "",
       });
     } catch (error) {
-      console.error('Form submission error:', error);
-      alert('Failed to send message. Please try again or email us directly at waterloovg@gmail.com');
+      console.error("Form submission error:", error);
+      setSubmitError(
+        "Failed to send message. Try again or email us at waterloovg@gmail.com."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -62,29 +83,18 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-16 lg:py-20 relative">
-      {/* Section divider */}
-      <div className="section-divider mb-16" />
-
-      {/* Background gradient */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-t from-wvg-purple/10 via-wvg-blue/5 to-transparent blur-[150px]" />
-      </div>
-
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-20">
-          {/* Left: Content */}
           <div>
-            {/* Section header */}
             <div className="border-l-2 border-wvg-teal/50 pl-6 mb-8">
               <h2 className="font-editorial text-5xl lg:text-6xl">Contact</h2>
             </div>
 
             <p className="font-grotesk text-xl text-white/80">
-              Let's build something worth following up on.
+              Let&apos;s build something worth following up on.
             </p>
           </div>
 
-          {/* Right: Form */}
           <div>
             {isSubmitted ? (
               <div className="white-frame p-10 text-center">
@@ -95,12 +105,11 @@ export default function Contact() {
                 </div>
                 <h3 className="font-editorial text-2xl mb-4">Message sent</h3>
                 <p className="font-mono text-sm text-white/70">
-                  We'll be in touch soon.
+                  We&apos;ll be in touch soon.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="white-frame p-8 lg:p-10 space-y-6">
-                {/* Name */}
                 <div>
                   <label htmlFor="name" className="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-2">
                     Name *
@@ -117,7 +126,6 @@ export default function Contact() {
                   />
                 </div>
 
-                {/* Email */}
                 <div>
                   <label htmlFor="email" className="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-2">
                     Email *
@@ -134,7 +142,6 @@ export default function Contact() {
                   />
                 </div>
 
-                {/* Organization */}
                 <div>
                   <label htmlFor="organization" className="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-2">
                     Organization
@@ -150,7 +157,6 @@ export default function Contact() {
                   />
                 </div>
 
-                {/* Intent */}
                 <div>
                   <label htmlFor="intent" className="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-2">
                     How can we help? *
@@ -169,7 +175,6 @@ export default function Contact() {
                   </select>
                 </div>
 
-                {/* Message */}
                 <div>
                   <label htmlFor="message" className="block font-mono text-[10px] uppercase tracking-widest text-white/60 mb-2">
                     Message *
@@ -186,7 +191,12 @@ export default function Contact() {
                   />
                 </div>
 
-                {/* Submit */}
+                {submitError && (
+                  <p className="font-mono text-sm text-red-400" role="alert">
+                    {submitError}
+                  </p>
+                )}
+
                 <button
                   type="submit"
                   disabled={isSubmitting}

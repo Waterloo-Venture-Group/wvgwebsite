@@ -79,6 +79,7 @@ export default function StandoutRooms({ events }: { events: StandoutEvent[] }) {
                   index === active ? "scale-100 group-hover:scale-[1.02]" : "scale-105"
                 }`}
                 sizes="(max-width: 1024px) 100vw, 900px"
+                quality={80}
                 priority={index === 0}
               />
             </div>

@@ -2,10 +2,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import WhatWeDo from "@/components/WhatWeDo";
 import Signals from "@/components/Signals";
-import Supporters from "@/components/Supporters";
 import Events from "@/components/Events";
-import BuildWithUs from "@/components/BuildWithUs";
-import GetInvolved from "@/components/GetInvolved";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -34,8 +31,6 @@ export default function Home() {
       <WhatWeDo />
       <Signals />
       <Events />
-      <BuildWithUs />
-      <GetInvolved />
       <Team />
       <Contact />
       <Footer />
