@@ -44,7 +44,7 @@ export default function BuildWithUs() {
               {/* Proof points */}
               <div className="white-frame p-6 space-y-4">
                 <div className="flex items-baseline gap-4">
-                  <span className="font-editorial text-3xl text-wvg-green">$4M+</span>
+                  <span className="font-editorial text-3xl text-wvg-green">$8.8M+</span>
                   <span className="text-white/60">raised across supported startups in just 8 months</span>
                 </div>
                 <div className="h-[1px] bg-white/10" />

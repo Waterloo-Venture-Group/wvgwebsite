@@ -1,4 +1,4 @@
-import MagicBentoPartners from "./MagicBento";
+import PartnersCarousel from "./PartnersCarousel";
 
 const supporters = [
   {
@@ -62,7 +62,7 @@ const supporters = [
 
 export default function Signals() {
   const metrics = [
-    { value: "$4M+", label: "Funding unlocked" },
+    { value: "$8.8M+", label: "Funding unlocked" },
     { value: "YC", label: "Cohort acceptance" },
     { value: "1300+", label: "Active members" },
     { value: "30+", label: "Students hired by startups" },
@@ -119,22 +119,13 @@ export default function Signals() {
           ))}
         </div>
 
-        {/* Partners subtitle and grid */}
+        {/* Partners subtitle and carousel */}
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-white/60 mb-4">
             Partners we've supported
           </p>
 
-          <MagicBentoPartners
-            supporters={supporters}
-            enableStars={true}
-            enableSpotlight={true}
-            enableBorderGlow={true}
-            clickEffect={true}
-            spotlightRadius={400}
-            particleCount={12}
-            glowColor="227, 133, 236"
-          />
+          <PartnersCarousel supporters={supporters} />
         </div>
 
         {/* Accent line */}

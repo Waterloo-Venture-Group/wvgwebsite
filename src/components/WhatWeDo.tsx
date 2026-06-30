@@ -29,18 +29,6 @@ export default function WhatWeDo() {
           <h2 className="font-editorial text-5xl lg:text-6xl">What we do</h2>
         </div>
 
-        {/* Intro copy */}
-        <div className="max-w-3xl mb-16">
-          <div className="font-mono text-sm text-white/70 leading-relaxed space-y-4">
-            <p>We don't "run programs."</p>
-            <p>We don't host filler events.</p>
-            <p>We don't send people home with tote bags and nothing to follow up on.</p>
-            <p className="text-white/80 pt-4 font-grotesk text-lg">
-              We do three things, very intentionally.
-            </p>
-          </div>
-        </div>
-
         {/* Pillars */}
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-6">
           {/* Pillar 1: For Founders */}

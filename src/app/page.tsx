@@ -1,6 +1,5 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import Story from "@/components/Story";
 import WhatWeDo from "@/components/WhatWeDo";
 import Signals from "@/components/Signals";
 import Supporters from "@/components/Supporters";
@@ -33,7 +32,6 @@ export default function Home() {
       <div className="relative z-10">
       <Nav />
       <Hero />
-      <Story />
       <WhatWeDo />
       <Signals />
       <Events />

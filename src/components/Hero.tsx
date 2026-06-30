@@ -42,11 +42,6 @@ export default function Hero() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             {/* Left: Text Content */}
             <div className="flex flex-col gap-6 lg:gap-8">
-              {/* Tagline */}
-              <p className="font-grotesk text-xl lg:text-2xl text-white/80 leading-tight">
-                Your early-stage edge and your way into the room.
-              </p>
-
             {/* Body copy */}
             <div className="font-mono text-sm text-white/70 leading-relaxed max-w-lg space-y-4">
               <p>
@@ -57,10 +52,6 @@ export default function Hero() {
                 We build rooms where founders meet future investors and co-founders, 
                 students find new roles that ship, and funds meet talent before the rest 
                 of the market catches on.
-              </p>
-              <p className="text-white/90">
-                Built in Waterloo.<br />
-                Connected far beyond it.
               </p>
             </div>
 

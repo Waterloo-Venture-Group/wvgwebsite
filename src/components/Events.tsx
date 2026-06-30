@@ -1,252 +1,151 @@
 import Image from "next/image";
-import dynamic from "next/dynamic";
-import type { MasonryItem } from "./Masonry";
-
-const Masonry = dynamic(() => import("./Masonry"), { ssr: false });
+import Link from "next/link";
 
 const LUMA_URL = "https://lu.ma/user/wvg";
 
-const events = [
+const standoutEvents = [
   {
-    src: "/photos/events/opennote_yc.jpg",
-    title: "Opennote (YC S25) Group Build Sprint",
-    date: "Winter 2026",
-    location: "Waterloo, ON",
-    category: "past" as const,
-    url: "https://www.linkedin.com/posts/waterlooventuregroup_students-dont-come-to-events-like-this-just-activity-7434682198185639938-32-H?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
-  },
-  {
+    index: "01",
+    partner: "Northside Ventures",
+    title: "Hiring Social",
+    detail: "YC-backed founders and student talent in one room.",
     src: "/photos/events/northside_event.JPG",
-    title: "Hiring Social ft. YC-Backed Founders by Northside Ventures",
-    titleHighlight: "YC-Backed",
-    date: "Winter 2026",
-    location: "Waterloo, ON",
-    category: "upcoming" as const,
     url: "https://luma.com/psehtf33",
+    span: "lg:col-span-7 lg:row-span-2",
+    aspect: "aspect-[4/3] lg:aspect-auto lg:min-h-[420px]",
   },
   {
-    src: "/photos/events/symposium_party.png",
-    title: "Symposium Kickoff Party with Polarity and Project Atlas",
-    date: "Winter 2026",
-    location: "Waterloo, ON",
-    category: "upcoming" as const,
-    url: "https://luma.com/k0xt9ctb",
-  },
-  {
-    src: "/photos/events/upfront.png",
-    title: "Upfront Ventures x Waterloo Builders Night (Pre‑Socratica Showcase)",
-    date: "Winter 2026",
-    location: "Waterloo, ON",
-    category: "upcoming" as const,
-    url: "https://luma.com/heq67l07?tk=LTelfr",
-  },
-  {
-    src: "/photos/events/alisonkaizer.jpeg",
-    title: "Fireside Chat with Alison Kaizer from Golden Ventures",
-    date: "Winter 2026",
-    location: "Virtual",
-    category: "past" as const,
-    url: "https://www.linkedin.com/posts/waterlooventuregroup_landing-a-student-role-in-venture-startups-activity-7429415519943827456-opxV?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
-  },
-  {
-    src: "/photos/events/theoryventures_talentroom.JPG",
-    title: "Talent Room with Theory Ventures",
-    date: "Winter 2026",
-    location: "Waterloo, ON",
-    category: "past" as const,
-    url: "https://www.linkedin.com/posts/waterlooventuregroup_maplevalley-waterloo-tech-activity-7421336000599060480-HApl?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
-  },
-  {
-    src: "/photos/events/exclusivedinner.jpeg",
-    title: "Off The Record: Private Recruitment Dinner",
-    date: "Winter 2026",
-    location: "Waterloo, ON",
-    category: "past" as const,
-  },
-  {
+    index: "02",
+    partner: "Golden Ventures",
+    title: "Founder Dinner",
+    detail: "An exclusive table for early-stage founders.",
     src: "/photos/events/golden_dinner.jpg",
-    title: "Golden Ventures Exclusive Founder Dinner",
-    date: "Fall 2025",
-    location: "Waterloo, ON",
-    category: "past" as const,
     url: "https://www.linkedin.com/posts/waterlooventuregroup_venture-waterlooecosystem-maplevalley-activity-7397122381510516736-kaNT?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
+    span: "lg:col-span-5",
+    aspect: "aspect-[4/3]",
   },
   {
-    src: "/photos/events/dsc_workshop2.JPG",
-    title: "Student Workshop: Building a Vertical AI Venture",
-    date: "Fall 2025",
-    location: "Waterloo, ON",
-    category: "past" as const,
-    url: "https://www.linkedin.com/posts/waterlooventuregroup_waterlooventuregroup-founderfuel-activity-7376294491600867328-wmeG?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
+    index: "03",
+    partner: "Theory Ventures",
+    title: "Talent Room",
+    detail: "A recruitment dinner connecting funds and operators.",
+    src: "/photos/events/theoryventures_talentroom.JPG",
+    url: "https://www.linkedin.com/posts/waterlooventuregroup_maplevalley-waterloo-tech-activity-7421336000599060480-HApl?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
+    span: "lg:col-span-5",
+    aspect: "aspect-[4/3]",
   },
   {
-    src: "/photos/events/northwood_whiteboard.JPG",
-    title: "Waterloo Tech Week: Whiteboard Stories with Northwood Family Office",
-    date: "Fall 2025",
-    location: "Waterloo, ON",
-    category: "past" as const,
-    url: "https://www.linkedin.com/posts/douglas-barker_finding-your-path-after-graduation-isnt-activity-7365799673330094080-RdlS?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
-  },
-  {
+    index: "04",
+    partner: "Ripple Ventures",
+    title: "Co-Working for Founders",
+    detail: "Waterloo Tech Week room for builders still shipping.",
     src: "/photos/events/comms_team.JPG",
-    title: "Waterloo Tech Week: Ripple Ventures Co-Working for Founders",
-    date: "Fall 2025",
-    location: "Waterloo, ON",
-    category: "past" as const,
     url: "https://www.linkedin.com/posts/waterlooventuregroup_waterlootechweek-venturecapital-tech-activity-7370671027644702721-HW-u?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
+    span: "lg:col-span-7",
+    aspect: "aspect-[16/9]",
   },
-  {
-    src: "/photos/events/juliabaird.jpg",
-    title: "Whiteboard Stories with Julia Baird from Golden Ventures",
-    date: "Summer 2025",
-    location: "Virtual",
-    category: "past" as const,
-    url: "https://www.linkedin.com/posts/waterlooventuregroup_venture-capital-needs-more-voices-and-we-activity-7348823843630690305-vIei?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
-  },
-  {
-    src: "/photos/events/dsc_workshop1.JPG",
-    title: "Student Workshop: Launching an AI Business",
-    date: "Summer 2025",
-    location: "Waterloo, ON",
-    category: "past" as const,
-    url: "https://www.linkedin.com/posts/waterlooventuregroup_from-idea-validation-pitch-all-in-one-activity-7335462698316451840-Mfrn?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
-  },
-];
+] as const;
 
-const upcomingEvents = events.filter((e) => e.category === "upcoming");
-const pastEvents = events.filter((e) => e.category === "past");
+function StandoutCard({
+  event,
+}: {
+  event: (typeof standoutEvents)[number];
+}) {
+  const content = (
+    <>
+      <Image
+        src={event.src}
+        alt={`${event.title} with ${event.partner}`}
+        fill
+        className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+        sizes="(max-width: 1024px) 100vw, 50vw"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/10" />
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-wvg-teal/10 via-transparent to-wvg-purple/10" />
 
-// Varied heights for masonry layout (creates condensed, flowing grid)
-// Values are halved in layout, so 400–600 yields ~200–300px rendered height
-const masonryHeights = [500, 420, 580, 460, 540, 400, 480, 520, 440, 560];
-const pastEventsMasonryItems: MasonryItem[] = pastEvents.map((event, i) => ({
-  id: `past-${i}`,
-  img: event.src,
-  url: event.url,
-  height: masonryHeights[i % masonryHeights.length],
-  title: event.title,
-  date: event.date,
-  location: event.location,
-}));
+      <div className="absolute top-4 left-4 font-mono text-[10px] tracking-[0.2em] text-white/40">
+        {event.index}
+      </div>
+
+      <div className="absolute bottom-0 left-0 right-0 p-5 lg:p-6">
+        <p className="font-mono text-[10px] uppercase tracking-widest text-wvg-teal mb-2">
+          {event.partner}
+        </p>
+        <h3 className="font-editorial text-2xl lg:text-3xl text-white mb-2">
+          {event.title}
+        </h3>
+        <p className="font-mono text-xs text-white/60 max-w-md">{event.detail}</p>
+        <span className="inline-block mt-4 font-mono text-[10px] uppercase tracking-wider text-white/40 group-hover:text-wvg-teal transition-colors">
+          View recap →
+        </span>
+      </div>
+    </>
+  );
+
+  const className = `group relative overflow-hidden white-frame card-hover ${event.span} ${event.aspect}`;
+
+  if (event.url) {
+    return (
+      <a
+        href={event.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return <div className={className}>{content}</div>;
+}
 
 export default function Events() {
   return (
     <section id="events" className="py-16 lg:py-20 relative">
-      {/* Section divider */}
       <div className="section-divider mb-16" />
 
-      {/* Background gradient */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute bottom-0 left-1/2 w-[800px] h-[800px] rounded-full bg-gradient-to-t from-wvg-purple/10 via-wvg-blue/5 to-transparent blur-[150px]" />
       </div>
 
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12">
-        {/* Section header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12">
           <div>
             <div className="border-l-2 border-wvg-teal/50 pl-6 mb-4">
               <h2 className="font-editorial text-5xl lg:text-6xl">Rooms we built</h2>
             </div>
             <p className="font-mono text-sm text-white/70 max-w-lg">
-              WVG curates high-signal rooms where founders, investors, and students 
-              meet before outcomes are obvious.
+              A few standout rooms where founders, investors, and students met
+              before the outcome was obvious.
             </p>
           </div>
           <a href="#contact" className="btn-primary shrink-0">
-            <span>Let's build one for you - see how</span>
+            <span>Let&apos;s build one for you</span>
           </a>
         </div>
 
-        {/* Upcoming events */}
-        <div className="mb-20">
-          <p className="font-mono text-[10px] uppercase tracking-widest text-wvg-teal mb-6">Upcoming events</p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {upcomingEvents.map((event, index) => (
-              <a
-                key={index}
-                href={event.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block"
-              >
-                <div className="relative aspect-[4/3] white-frame overflow-hidden card-hover">
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20 pointer-events-none gradient-border" />
-                  <Image
-                    src={event.src}
-                    alt={event.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent z-10" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
-                    <h3 className="font-editorial text-2xl mb-2 text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.8)]">
-                      {event.titleHighlight ? (
-                        <>
-                          {event.title.split(event.titleHighlight)[0]}
-                          <span className="border-b-2 border-orange-400 pb-0.5 text-orange-400 [text-shadow:0_1px_2px_rgba(0,0,0,0.9)]">
-                            {event.titleHighlight}
-                          </span>
-                          {event.title.split(event.titleHighlight)[1]}
-                        </>
-                      ) : (
-                        event.title
-                      )}
-                    </h3>
-                    <div className="flex items-center gap-4 font-mono text-[10px] uppercase tracking-wider text-white/90 mb-4 [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
-                      <span>{event.date}</span>
-                      <span className="w-1 h-1 rounded-full bg-white/30" />
-                      <span>{event.location}</span>
-                    </div>
-                    <span className="font-mono text-xs uppercase tracking-wider text-wvg-teal group-hover:underline [text-shadow:0_1px_2px_rgba(0,0,0,0.8)]">
-                      Register →
-                    </span>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
+        <p className="font-mono text-[10px] uppercase tracking-widest text-white/50 mb-6">
+          Standout past events
+        </p>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 auto-rows-fr">
+          {standoutEvents.map((event) => (
+            <StandoutCard key={event.index} event={event} />
+          ))}
         </div>
 
-        {/* Past events - Masonry layout for condensed, smooth display */}
-        <div>
-          <p className="font-mono text-[10px] uppercase tracking-widest text-white/50 mb-6">Past events</p>
-          <Masonry
-            items={pastEventsMasonryItems}
-            ease="power3.out"
-            duration={0.6}
-            stagger={0.05}
-            animateFrom="bottom"
-            scaleOnHover={false}
-            blurToFocus
-            colorShiftOnHover={false}
-            grayscale
-          />
-        </div>
-
-        {/* Luma CTA - keep the "follow for updates" prompt */}
-        <div className="mt-16">
-          <a 
-            href={LUMA_URL} 
-            target="_blank" 
+        <p className="mt-10 font-mono text-xs text-white/45">
+          For what&apos;s next,{" "}
+          <Link
+            href={LUMA_URL}
+            target="_blank"
             rel="noopener noreferrer"
-            className="group block"
+            className="text-wvg-teal hover:text-white transition-colors"
           >
-            <div className="relative white-frame p-8 lg:p-12 overflow-hidden transition-all duration-500 group-hover:border-wvg-teal/50">
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br from-wvg-teal/10 via-wvg-blue/5 to-wvg-purple/10" />
-              <div className="relative z-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-                <div>
-                  <p className="font-mono text-xs uppercase tracking-widest text-wvg-teal mb-2">Get first access</p>
-                  <p className="font-mono text-sm text-white/80">
-                    Follow us on Luma for exclusive early access to dinners, summits, workshops, and rooms we're building.
-                  </p>
-                </div>
-                <span className="font-mono text-xs uppercase tracking-wider text-wvg-teal group-hover:underline shrink-0">
-                  Follow on Luma →
-                </span>
-              </div>
-            </div>
-          </a>
-        </div>
+            follow us on Luma →
+          </Link>
+        </p>
       </div>
     </section>
   );
