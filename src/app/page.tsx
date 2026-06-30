@@ -7,7 +7,6 @@ import Events from "@/components/Events";
 import BuildWithUs from "@/components/BuildWithUs";
 import GetInvolved from "@/components/GetInvolved";
 import Team from "@/components/Team";
-import Socials from "@/components/Socials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ShapeGrid from "@/components/ShapeGrid";
@@ -38,7 +37,6 @@ export default function Home() {
       <BuildWithUs />
       <GetInvolved />
       <Team />
-      <Socials />
       <Contact />
       <Footer />
       </div>

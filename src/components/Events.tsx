@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Link from "next/link";
+import StandoutRooms from "./StandoutRooms";
 
 const LUMA_URL = "https://lu.ma/user/wvg";
 
@@ -8,7 +7,7 @@ const standoutEvents = [
     partner: "Northside Ventures",
     title: "Hiring Social",
     src: "/photos/events/northside_event.JPG",
-    url: "https://luma.com/psehtf33",
+    url: "https://www.linkedin.com/posts/alexander-mcisaac_last-week-northside-ventures-hosted-a-hiring-activity-7442649809619996672-9TsR/",
   },
   {
     partner: "Golden Ventures",
@@ -28,45 +27,7 @@ const standoutEvents = [
     src: "/photos/events/comms_team.JPG",
     url: "https://www.linkedin.com/posts/waterlooventuregroup_waterlootechweek-venturecapital-tech-activity-7370671027644702721-HW-u?utm_source=share&utm_medium=member_desktop&rcm=ACoAADbpAHcB9rmKqOK-zySHcZYW5zFoq3CTYWU",
   },
-] as const;
-
-function StandoutCard({
-  event,
-}: {
-  event: (typeof standoutEvents)[number];
-}) {
-  return (
-    <a
-      href={event.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group flex items-center gap-4 px-4 py-3 sm:px-5 sm:py-4 transition-colors hover:bg-white/[0.03]"
-    >
-      <div className="relative h-14 w-20 shrink-0 overflow-hidden rounded-md border border-white/10">
-        <Image
-          src={event.src}
-          alt={`${event.title} with ${event.partner}`}
-          fill
-          className="object-cover grayscale-[30%] group-hover:grayscale-0 transition-all duration-300"
-          sizes="80px"
-        />
-      </div>
-
-      <div className="min-w-0 flex-1">
-        <p className="font-mono text-[10px] uppercase tracking-widest text-white/45 mb-1">
-          {event.partner}
-        </p>
-        <p className="font-grotesk text-sm sm:text-base text-white/90 truncate group-hover:text-white transition-colors">
-          {event.title}
-        </p>
-      </div>
-
-      <span className="font-mono text-[10px] uppercase tracking-wider text-white/30 group-hover:text-wvg-teal transition-colors shrink-0">
-        →
-      </span>
-    </a>
-  );
-}
+];
 
 export default function Events() {
   return (
@@ -80,36 +41,40 @@ export default function Events() {
       <div className="relative max-w-[1400px] mx-auto px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
           <div>
-            <div className="border-l-2 border-wvg-teal/50 pl-6 mb-3">
+            <div className="border-l-2 border-wvg-teal/50 pl-6 mb-6">
               <h2 className="font-editorial text-5xl lg:text-6xl">Rooms we built</h2>
             </div>
-            <p className="font-mono text-sm text-white/70 max-w-lg">
-              A few standout rooms where founders, investors, and students met
-              before the outcome was obvious.
-            </p>
           </div>
-          <a href="#contact" className="btn-primary shrink-0">
-            <span>Let&apos;s build one for you</span>
-          </a>
-        </div>
-
-        <div className="white-frame divide-y divide-white/10 overflow-hidden">
-          {standoutEvents.map((event) => (
-            <StandoutCard key={event.title} event={event} />
-          ))}
-        </div>
-
-        <p className="mt-6 font-mono text-xs text-white/45">
-          For what&apos;s next,{" "}
-          <Link
+          <a
             href={LUMA_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-wvg-teal hover:text-white transition-colors"
+            className="group shrink-0 border border-white/15 bg-white/[0.02] px-5 py-4 transition-all duration-300 hover:border-wvg-teal/40 hover:bg-wvg-teal/[0.04]"
           >
-            follow us on Luma →
-          </Link>
-        </p>
+            <p className="font-mono text-[10px] uppercase tracking-widest text-white/40 mb-2">
+              For what&apos;s next
+            </p>
+            <span className="font-grotesk text-sm font-medium text-white group-hover:text-wvg-teal transition-colors inline-flex items-center gap-2">
+              Follow on Luma
+              <svg
+                className="w-4 h-4 transition-transform group-hover:translate-x-0.5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <StandoutRooms events={standoutEvents} />
       </div>
     </section>
   );

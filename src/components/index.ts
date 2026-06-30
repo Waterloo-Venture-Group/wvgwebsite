@@ -6,6 +6,5 @@ export { default as Events } from "./Events";
 export { default as BuildWithUs } from "./BuildWithUs";
 export { default as GetInvolved } from "./GetInvolved";
 export { default as EventList } from "./EventList";
-export { default as Socials } from "./Socials";
 export { default as Contact } from "./Contact";
 export { default as Footer } from "./Footer";

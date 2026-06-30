@@ -79,40 +79,9 @@ export default function Contact() {
               <h2 className="font-editorial text-5xl lg:text-6xl">Contact</h2>
             </div>
 
-            <p className="font-grotesk text-xl text-white/80 mb-12">
+            <p className="font-grotesk text-xl text-white/80">
               Let's build something worth following up on.
             </p>
-
-            {/* Email */}
-            <div className="white-frame p-6 inline-block mb-12">
-              <p className="font-mono text-[10px] uppercase tracking-widest text-white/60 mb-2">
-                Email
-              </p>
-              <a
-                href="mailto:waterloovg@gmail.com"
-                className="font-mono text-sm hover:text-wvg-teal transition-colors"
-              >
-                waterloovg@gmail.com
-              </a>
-            </div>
-
-            {/* Quick links */}
-            <div className="space-y-4">
-              <p className="font-mono text-[10px] uppercase tracking-widest text-white/60">
-                Quick links
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <a href="#build-with-us" className="btn-secondary text-xs">
-                  <span>Build with us</span>
-                </a>
-                <a href="#get-involved" className="btn-secondary text-xs">
-                  <span>Get involved</span>
-                </a>
-                <a href="#events" className="btn-secondary text-xs">
-                  <span>Partner with us</span>
-                </a>
-              </div>
-            </div>
           </div>
 
           {/* Right: Form */}

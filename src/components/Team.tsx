@@ -1,5 +1,4 @@
 import Image from "next/image";
-import BounceCards from "./BounceCards";
 
 const leadership = [
   {
@@ -25,123 +24,6 @@ const leadership = [
     role: "Managing Director",
     linkedin: "https://www.linkedin.com/in/demireren/",
     image: "/photos/leadership/demireren.jpeg",
-  },
-];
-
-const associates = [
-  {
-    name: "Daiva Saplys",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/daivasaplys/",
-    image: "/photos/team/Daiva-Headshot.jpg",
-  },
-  {
-    name: "Paige Griffiths",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/paige-griffiths-b889432a4/",
-    image: "/photos/team/Paige-Headshot.jpg",
-  },
-  {
-    name: "Alyanna Fuentes",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/alyanna-f/",
-    image: "/photos/team/Alyanna-Headshot.jpg",
-  },
-  {
-    name: "Rasana Yogarajan",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/rasanayogarajan/",
-    image: "/photos/team/Rasana-Headshot.jpg",
-  },
-  {
-    name: "Rudra Jassal",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/rudrajassal/",
-    image: "/photos/team/Headshot-Rudra.jpg",
-  },
-  {
-    name: "Hur Abbas Merchant",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/hurabbas-merchant/",
-    image: "/photos/team/Headshot-Hur.jpg",
-  },
-  {
-    name: "Yash Panchal",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/yash-panchal-80a422333/",
-    image: "/photos/team/Headshot-Yash.jpg",
-  },
-  {
-    name: "Ammar Adam",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/ammar-adam/",
-    image: "/photos/team/Ammar-Headshot-New.jpg",
-  },
-  {
-    name: "Michael Zhang",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/michael-zhang-921ab0274/",
-    image: "/photos/team/Michael-Headshot.jpg",
-  },
-  {
-    name: "Srinikesh Singarapu",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/srinikesh-singarapu/",
-    image: "/photos/team/Srini-Headshot.jpg",
-  },
-  {
-    name: "Ilyas Mohamed",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/ilyasemohamed/",
-    image: "/photos/team/Ilyas-Headshot.jpg",
-  },
-  {
-    name: "Nathan Bridgemohan",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/nathan-bridgemohan/",
-    image: "/photos/team/Nathan-Headshot.jpg",
-  },
-  {
-    name: "Jester Yang",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/jester-yang/",
-    image: "/photos/team/Headshot-Jester.png",
-  },
-  {
-    name: "Ishir Lakhani",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/ishirl/",
-    image: "/photos/team/Ishir-Headshot.jpg",
-  },
-  {
-    name: "Jia Naidu",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/jia-naidu-598b18240/",
-    image: "/photos/team/Jia-Headshot.jpg",
-  },
-  {
-    name: "Dev Chandarana",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/dev-chandarana-x/",
-    image: "/photos/team/Dev-Headshot.jpg",
-  },
-  {
-    name: "Spencer Spiegelman",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/spencer-m-spiegelman/",
-    image: "/photos/team/Spencer-Headshot.jpg",
-  },
-  {
-    name: "Mihai Posea",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/mihaiposea/",
-    image: "/photos/team/Mihai-Headshot.jpg",
-  },
-  {
-    name: "Ellen He",
-    role: "Associate",
-    linkedin: "https://www.linkedin.com/in/he-ellen/",
-    image: "/photos/team/Ellen-Headshot.jpeg",
   },
 ];
 
@@ -172,7 +54,7 @@ export default function Team() {
         </div>
 
         {/* Leadership - matching card style, no overlap */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {leadership.map((member, index) => (
             <a
               key={index}
@@ -210,32 +92,6 @@ export default function Team() {
               </div>
             </a>
           ))}
-        </div>
-
-        {/* Associates - BounceCards layout */}
-        <div>
-          <div className="flex items-center gap-4 mb-8">
-            <div className="w-8 h-[1px] bg-wvg-teal/50" />
-            <h3 className="font-editorial text-3xl lg:text-4xl">Associates</h3>
-          </div>
-          <div className="overflow-x-auto overflow-y-visible pb-4 sm:overflow-visible">
-            <div className="flex justify-center min-w-[1100px] sm:min-w-0">
-              <BounceCards
-                items={associates.map(({ name, image, linkedin }) => ({
-                  name,
-                  image,
-                  linkedin,
-                }))}
-                cardSize={220}
-                overlapPx={95}
-                rows={2}
-                animationDelay={0.3}
-                animationStagger={0.04}
-                easeType="elastic.out(1, 0.5)"
-                enableHover
-              />
-            </div>
-          </div>
         </div>
       </div>
     </section>

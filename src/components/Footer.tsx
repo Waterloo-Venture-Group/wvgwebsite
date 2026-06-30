@@ -12,8 +12,6 @@ export default function Footer() {
           <div className="lg:col-span-6">
             <div className="font-editorial text-2xl lg:text-3xl text-white/80 leading-relaxed mb-8">
               <p>Built in the Maple Valley.</p>
-              <p>Still here. Still building.</p>
-              <p className="text-white">Still believing the right room changes everything.</p>
             </div>
 
             {/* Logo */}
@@ -42,7 +40,6 @@ export default function Footer() {
                     { href: "#what-we-do", label: "What we do" },
                     { href: "#events", label: "Events" },
                     { href: "#team", label: "Team" },
-                    { href: "#socials", label: "Socials" },
                     { href: "#contact", label: "Contact" },
                   ].map((link) => (
                     <li key={link.href}>
@@ -68,7 +65,7 @@ export default function Footer() {
                     { href: "https://x.com/waterloovg", label: "X" },
                     { href: "https://www.linkedin.com/company/waterlooventuregroup/", label: "LinkedIn" },
                     { href: "https://lu.ma/user/wvg", label: "Luma" },
-                    { href: "mailto:waterloovg@gmail.com", label: "waterloovg@gmail.com" },
+                    { href: "mailto:waterloovg@gmail.com", label: "Email" },
                   ].map((link) => (
                     <li key={link.href}>
                       <a
